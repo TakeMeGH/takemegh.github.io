@@ -1,0 +1,259 @@
+@import url(http://fonts.googleapis.com/css?family=Abel);
+
+/* body { background-color:#fefdfb; color: #555; font-family: 'Roboto', sans-serif;  font-size: 14px; font-weight:normal;margin: 0; }
+a:link, a:visited, a:active{ color:inherit; text-decoration: none; }
+a:hover {color: #FC436B; text-decoration:underline; } */
+
+
+body {
+  background: radial-gradient(circle at center, #1e2a3a, #1b2025);
+  color: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.centered-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.centered-list li {
+  list-style-type: none;
+}
+
+.card {
+  background-color: #203040;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.card-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.card-button {
+  background-color: #6c8bc7;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #5b78af;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fade-in 1s ease;
+}
+
+.centered-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section {
+  margin-bottom: 200px;
+}
+.centered-list .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.centered-list .social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+}
+.centered-list .social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #ffffff;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-container .card {
+  flex: 1;
+  margin: 0 10px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #203040;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.modal-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.modal-button {
+  background-color: #6c8bc7;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.modal-button:hover {
+  background-color: #5b78af;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Feedback Pop-up Styles */
+.feedback-popup {
+  position: fixed;
+  top: 20px; /* Adjust the top value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 9999;
+}
+
+.feedback-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.feedback-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.feedback-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.feedback-description {
+  font-size: 18px;
+}
+
+.feedback-email {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.feedback-email img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.feedback-email a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.feedback-email p:hover {
+  text-decoration: underline;
+}
+
+
+
+
