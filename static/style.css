@@ -160,17 +160,19 @@ section {
   text-align: center;
   position: relative;
   overflow: hidden;
+  overflow-y: auto;
+  max-height: 540px; /* Adjust the max height as needed */
 }
 
 .modal-title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   margin-bottom: 10px;
   color: #ffffff;
 }
 
 .modal-description {
-  font-size: 16px;
+  font-size: 24px;
   margin-bottom: 20px;
   color: #ffffff;
 }
