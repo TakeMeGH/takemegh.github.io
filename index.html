@@ -69,7 +69,7 @@
         </section>
         <section class="py-8 text-center fade-in">
             <h1 class="text-4xl font-bold mb-2">Projects</h1>
-            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4" id="project-cards">
                 <div class="card">
                     <img class="card-image" src="static/image/1945.jpg" alt="Project 1" />
                     <h2 class="card-title">The 1945</h2>
@@ -128,6 +128,29 @@
                     <a class="card-button hover:bg-blue-700" href="https://navisraditya.itch.io/trafficky">More
                         Details</a>
                 </div>
+
+                <div class="card">
+                    <img class="card-image" src="static/image/Traficky.png" alt="Project 4" />
+                    <h2 class="card-title">Test Project 4</h2>
+                    <p class="card-description">
+                        Trafficky is a game designed for the Game
+                        Application Development contest during the GEMASTIK
+                        XVI event series. It's centered on imparting Traffic
+                        Education and Ethics to kids. In Trafficky, players
+                        join forces with Rara, a policewoman, and get to
+                        feel the excitement of overseeing traffic!
+                    </p>
+                    <!-- <a
+                          class="card-button hover:bg-blue-700"
+                          href="#"
+                          data-modal-id="modal1"
+                          >More Details</a
+                      > -->
+                    <a class="card-button hover:bg-blue-700" href="https://navisraditya.itch.io/trafficky">More
+                        Details</a>
+                </div>
+            <button id="slide-project-left">LEFT</button>
+            <button id="slide-project-right">RIGHT</button>
             </div>
         </section>
 
@@ -337,7 +360,7 @@
 
             // Get the feedback pop-up elements
             const feedbackPopup = document.getElementById("feedback-popup");
-            const feedbackClose = document.querySelector(".feedback-close");
+            // const feedbackClose = document.querySelector(".feedback-close");
 
             // Add click event listener to the email element
             emailElement.addEventListener("click", () => {
@@ -354,12 +377,49 @@
                 }, 2000);
             });
 
-            // Add click event listener to the feedback close button
-            feedbackClose.addEventListener("click", () => {
-                // Hide the feedback pop-up when the close button is clicked
-                feedbackPopup.classList.add("hidden");
+            // // Add click event listener to the feedback close button
+            // feedbackClose.addEventListener("click", () => {
+            //     // Hide the feedback pop-up when the close button is clicked
+            //     feedbackPopup.classList.add("hidden");
+            // });
+
+            let curIndex = 0; // Indeks awal
+            const cards = document.querySelectorAll('#project-cards .card'); // Seleksi semua kartu
+            const totalCards = cards.length; // Jumlah total kartu
+            const visibleCards = 3; // Jumlah kartu yang ditampilkan pada satu waktu
+
+            // Fungsi untuk memperbarui tampilan kartu
+            function updateCardDisplay() {
+                cards.forEach((card, index) => {
+                    if (index >= curIndex && index < curIndex + visibleCards) {
+                        card.style.display = 'flex'; // Atau 'flex' atau lainnya sesuai dengan layout Anda
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('slide-project-right').addEventListener('click', function () {
+                    if (curIndex < totalCards - visibleCards) {
+                        curIndex++;
+                        updateCardDisplay();
+                    }
+                });
             });
+
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('slide-project-left').addEventListener('click', function () {
+                    if (curIndex > 0) {
+                        curIndex--;
+                        updateCardDisplay();
+                    }
+                });
+            });
+            updateCardDisplay();
+
         </script>
+
     </div>
 </body>
 
