@@ -406,15 +406,17 @@
             const cards = document.querySelectorAll('#project-cards .card'); // Seleksi semua kartu
             const totalCards = cards.length; // Jumlah total kartu
             let visibleCards = 3; // Jumlah kartu yang ditampilkan pada satu waktu
-
+            let isSmallScreen = false;
             // Fungsi untuk memperbarui tampilan kartu
             function updateCardDisplay() {
                 cards.forEach((card, index) => {
                     if (index >= curIndex && index < curIndex + visibleCards) {
                         card.style.display = 'flex'; // Atau 'flex' atau lainnya sesuai dengan layout Anda
-                        card.classList.remove("fade-in")
-                        void card.offsetWidth; // Trigger reflow agar animasi ke refresh
-                        card.classList.add("fade-in")
+                        if (!isSmallScreen) {
+                            card.classList.remove("fade-in")
+                            void card.offsetWidth; // Trigger reflow agar animasi ke refresh
+                            card.classList.add("fade-in")
+                        }
                     }
                     else {
                         card.style.display = 'none';
@@ -462,8 +464,7 @@
             }
 
             function adjustVisibleCards() {
-                const isSmallScreen = window.matchMedia("(max-width: 639px)").matches;
-                console.log("change screen")
+                isSmallScreen = window.matchMedia("(max-width: 639px)").matches;
                 if (isSmallScreen) {
                     visibleCards = cards.length; // Tampilkan semua kartu untuk layar kecil
                 } else {
