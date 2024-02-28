@@ -186,7 +186,8 @@
                     <img class="card-image" src="static/image/ikadev-logo.jpeg" alt="Ikadev" />
                     <h2 class="card-title">Ikadev - Game Programmer</h2>
                     <p class="card-description">
-                        As a Godot game programmer intern for Sunny Side Crosing Project at Ikadev Studio. I am currently continuing in this role.
+                        As a Godot game programmer intern for Sunny Side Crosing Project at Ikadev Studio. I am
+                        currently continuing in this role.
                     </p>
                 </div>
                 <div class="card">
@@ -411,7 +412,11 @@
                 cards.forEach((card, index) => {
                     if (index >= curIndex && index < curIndex + visibleCards) {
                         card.style.display = 'flex'; // Atau 'flex' atau lainnya sesuai dengan layout Anda
-                    } else {
+                        card.classList.remove("fade-in")
+                        void card.offsetWidth; // Trigger reflow agar animasi ke refresh
+                        card.classList.add("fade-in")
+                    }
+                    else {
                         card.style.display = 'none';
                     }
                 });
