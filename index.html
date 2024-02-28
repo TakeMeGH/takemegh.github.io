@@ -67,31 +67,35 @@
                 href="https://docs.google.com/document/d/1z0XRGCpPVwsF2rmpqs1HYQ_MY2OlKKxf/edit?usp=sharing&ouid=105857952239014899947&rtpof=true&sd=true">Open
                 My Latest CV</a>
         </section>
-        <section class="py-8 text-center fade-in">
+        <section class="py-8 text-center fade-in relative">
             <h1 class="text-4xl font-bold mb-2">Projects</h1>
-            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4" id="project-cards">
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 relative" id="project-cards">
+
                 <div class="card">
-                    <img class="card-image" src="static/image/1945.jpg" alt="Project 1" />
-                    <h2 class="card-title">The 1945</h2>
+                    <img class="card-image" src="static/image/Rocateer.png" alt="Project 4" />
+                    <h2 class="card-title">Rocateer</h2>
+                    <h2 class="card-game-engine-desc">Game Engine : Godot</h2>
                     <p class="card-description">
-                        "The 1945" is a game project created specifically
-                        for the Joints Game Jam 2023. This game is a
-                        top-down shooter, but it incorporates unique twists
-                        and additional features to enhance the gameplay
-                        experience.
+                        A game developed by "menggeming" team for Garena Game Jam 2023. Players gather gold to construct
+                        a rocketship, dealing with a decreasing hunger level that imposes a time constraint on their
+                        journey.
+                        Players leverage their demise as a strategic feature, using death to upgrade and enhance their
+                        perks in this unique gaming experience.
                     </p>
                     <!-- <a
-                            class="card-button hover:bg-blue-700"
-                            href="#"
-                            data-modal-id="modal1"
-                            >More Details</a
-                        > -->
-                    <a class="card-button hover:bg-blue-700" href="https://navisraditya.itch.io/the-1945-by-booleh">More
+                          class="card-button hover:bg-blue-700"
+                          href="#"
+                          data-modal-id="modal1"
+                          >More Details</a
+                      > -->
+                    <a class="card-button hover:bg-blue-700" href="https://navisraditya.itch.io/rocateer">More
                         Details</a>
                 </div>
+
                 <div class="card">
                     <img class="card-image" src="static/image/compfest-downwell.png" alt="Project 2" />
                     <h2 class="card-title">Galactic Dive</h2>
+                    <h2 class="card-game-engine-desc">Game Engine : Unity</h2>
                     <p class="card-description">
                         Galactic Dive is a project being developed for the
                         Compfest 2023 website. This game is an endless game.
@@ -111,6 +115,7 @@
                 <div class="card">
                     <img class="card-image" src="static/image/Traficky.png" alt="Project 3" />
                     <h2 class="card-title">Trafficky</h2>
+                    <h2 class="card-game-engine-desc">Game Engine : Unity</h2>
                     <p class="card-description">
                         Trafficky is a game designed for the Game
                         Application Development contest during the GEMASTIK
@@ -130,34 +135,40 @@
                 </div>
 
                 <div class="card">
-                    <img class="card-image" src="static/image/Traficky.png" alt="Project 4" />
-                    <h2 class="card-title">Test Project 4</h2>
+                    <img class="card-image" src="static/image/1945.jpg" alt="Project 1" />
+                    <h2 class="card-title">The 1945</h2>
+                    <h2 class="card-game-engine-desc">Game Engine : Unity</h2>
                     <p class="card-description">
-                        Trafficky is a game designed for the Game
-                        Application Development contest during the GEMASTIK
-                        XVI event series. It's centered on imparting Traffic
-                        Education and Ethics to kids. In Trafficky, players
-                        join forces with Rara, a policewoman, and get to
-                        feel the excitement of overseeing traffic!
+                        "The 1945" is a game project created specifically
+                        for the Joints Game Jam 2023. This game is a
+                        top-down shooter, but it incorporates unique twists
+                        and additional features to enhance the gameplay
+                        experience.
                     </p>
                     <!-- <a
-                          class="card-button hover:bg-blue-700"
-                          href="#"
-                          data-modal-id="modal1"
-                          >More Details</a
-                      > -->
-                    <a class="card-button hover:bg-blue-700" href="https://navisraditya.itch.io/trafficky">More
+                            class="card-button hover:bg-blue-700"
+                            href="#"
+                            data-modal-id="modal1"
+                            >More Details</a
+                        > -->
+                    <a class="card-button hover:bg-blue-700" href="https://navisraditya.itch.io/the-1945-by-booleh">More
                         Details</a>
                 </div>
-            <button id="slide-project-left">LEFT</button>
-            <button id="slide-project-right">RIGHT</button>
+
+                <button id="slide-project-left"
+                    class="absolute top-1/2 left-0 -ml-15 transform -translate-y-1/2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full z-10">
+                    <img src="static\image\left-arrow.png" alt="Left" style="width: 20px; height: 20px;"></button>
+                <button id="slide-project-right"
+                    class="absolute top-1/2 right-0 -mr-15 transform -translate-y-1/2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full z-10">
+                    <img src="static\image\right-arrow.png" alt="Left" style="width: 20px; height: 20px;"></button>
+                </button>
             </div>
         </section>
 
         <!-- ganti grid cols kalo mau tambah -->
         <section class="py-8 text-center fade-in">
             <h1 class="text-4xl font-bold mb-2">Work Experience</h1>
-            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div class="card">
                     <img class="card-image" src="static/image/kc.jpeg" alt="Kokocoder Group" />
                     <h2 class="card-title">Kokocoder - Coding Coach</h2>
@@ -169,6 +180,13 @@
                         assisting them in improving their coding skills and
                         guiding them in their journey to excel in the
                         competition.
+                    </p>
+                </div>
+                <div class="card">
+                    <img class="card-image" src="static/image/ikadev-logo.jpeg" alt="Ikadev" />
+                    <h2 class="card-title">Ikadev - Game Programmer</h2>
+                    <p class="card-description">
+                        As a Godot game programmer intern for Sunny Side Crosing Project at Ikadev Studio. I am currently continuing in this role.
                     </p>
                 </div>
                 <div class="card">
@@ -386,7 +404,7 @@
             let curIndex = 0; // Indeks awal
             const cards = document.querySelectorAll('#project-cards .card'); // Seleksi semua kartu
             const totalCards = cards.length; // Jumlah total kartu
-            const visibleCards = 3; // Jumlah kartu yang ditampilkan pada satu waktu
+            let visibleCards = 3; // Jumlah kartu yang ditampilkan pada satu waktu
 
             // Fungsi untuk memperbarui tampilan kartu
             function updateCardDisplay() {
@@ -400,22 +418,60 @@
             }
 
             document.addEventListener('DOMContentLoaded', function () {
+                updateButtonVisibility(); // Memperbarui visibilitas tombol saat halaman dimuat
+
                 document.getElementById('slide-project-right').addEventListener('click', function () {
                     if (curIndex < totalCards - visibleCards) {
                         curIndex++;
                         updateCardDisplay();
+                        updateButtonVisibility(); // Memperbarui visibilitas setelah perubahan indeks
                     }
                 });
-            });
 
-            document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById('slide-project-left').addEventListener('click', function () {
                     if (curIndex > 0) {
                         curIndex--;
                         updateCardDisplay();
+                        updateButtonVisibility(); // Memperbarui visibilitas setelah perubahan indeks
                     }
                 });
             });
+
+            function updateButtonVisibility() {
+                let leftButton = document.getElementById('slide-project-left');
+                let rightButton = document.getElementById('slide-project-right');
+
+                // Menyembunyikan tombol kiri jika curIndex adalah 0
+                if (curIndex <= 0) {
+                    leftButton.style.display = 'none';
+                } else {
+                    leftButton.style.display = 'block'; // Atau 'inline-block' atau 'flex' sesuai dengan layout Anda
+                }
+
+                // Menyembunyikan tombol kanan jika tidak ada lebih banyak item untuk ditampilkan
+                if (curIndex >= totalCards - visibleCards) {
+                    rightButton.style.display = 'none';
+                } else {
+                    rightButton.style.display = 'block'; // Atau 'inline-block' atau 'flex'
+                }
+            }
+
+            function adjustVisibleCards() {
+                const isSmallScreen = window.matchMedia("(max-width: 639px)").matches;
+                console.log("change screen")
+                if (isSmallScreen) {
+                    visibleCards = cards.length; // Tampilkan semua kartu untuk layar kecil
+                } else {
+                    visibleCards = 3; // Tampilkan 3 kartu untuk layar lebih besar
+                }
+
+                updateCardDisplay();
+                updateButtonVisibility();
+            }
+
+            // Panggil fungsi saat halaman dimuat dan saat ukuran layar berubah
+            document.addEventListener('DOMContentLoaded', adjustVisibleCards);
+            window.addEventListener('resize', adjustVisibleCards);
             updateCardDisplay();
 
         </script>

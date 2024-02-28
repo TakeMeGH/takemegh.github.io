@@ -55,6 +55,13 @@ body {
   color: #ffffff;
 }
 
+.card-game-engine-desc {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
 .card-description {
   font-size: 16px;
   margin-bottom: 20px;
