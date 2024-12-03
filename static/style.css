@@ -39,11 +39,11 @@ body {
 
 .card-image {
   width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
+  height: 150px;
+  border-radius: 10%;
+  object-fit: scale-down;
   margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
   transform: scale(1);
   transition: transform 0.3s ease;
 }
@@ -80,6 +80,14 @@ body {
 .card-button:hover {
   background-color: #5b78af;
 }
+
+.grid-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  justify-content: center;
+}
+
 
 @keyframes fade-in {
   0% {

@@ -85,7 +85,11 @@
                         altText: "Project 1",
                         title: "Rocateer",
                         gameEngine: "Game Engine : Godot",
-                        description: "A game developed by 'menggeming' team for Garena Game Jam 2023. Players gather gold to construct a rocketship...",
+                        description: `A game developed by "menggeming" team for Garena Game Jam 2023. Players gather gold to construct
+                        a rocketship, dealing with a decreasing hunger level that imposes a time constraint on their
+                        journey.
+                        Players leverage their demise as a strategic feature, using death to upgrade and enhance their
+                        perks in this unique gaming experience.`,
                         linkUrl: "https://navisraditya.itch.io/rocateer"
                     },
                     {
@@ -93,7 +97,11 @@
                         altText: "Project 2",
                         title: "Galactic Dive",
                         gameEngine: "Game Engine : Unity",
-                        description: "Galactic Dive is a project being developed for the Compfest 2023 website. This game is an endless game...",
+                        description: `Galactic Dive is a project being developed for the
+                        Compfest 2023 website. This game is an endless game.
+                        In this game, the player must earn as many points as
+                        possible by killing enemies, falling deeper, and
+                        surviving as long as possible.`,
                         linkUrl: "https://takemegh.itch.io/galactic-dive"
                     },
                     {
@@ -101,43 +109,62 @@
                         altText: "Project 3",
                         title: "Trafficky",
                         gameEngine: "Game Engine : Unity",
-                        description: "Trafficky is a game designed for the GEMASTIK XVI event series. It's centered on imparting Traffic Education...",
+                        description: `Trafficky is a game designed for the Game
+                        Application Development contest during the GEMASTIK
+                        XVI event series. It's centered on imparting Traffic
+                        Education and Ethics to kids. In Trafficky, players
+                        join forces with Rara, a policewoman, and get to
+                        feel the excitement of overseeing traffic!`,
                         linkUrl: "https://navisraditya.itch.io/trafficky"
                     },
-                    {
-                        imageSrc: "static/image/1945.jpg",
-                        altText: "Project 4",
-                        title: "The 1945",
-                        gameEngine: "Game Engine : Unity",
-                        description: "'The 1945' is a game project created specifically for the Joints Game Jam 2023. This game is a top-down shooter...",
-                        linkUrl: "https://navisraditya.itch.io/the-1945-by-booleh"
-                    }
+                    // {
+                    //     imageSrc: "static/image/1945.jpg",
+                    //     altText: "Project 4",
+                    //     title: "The 1945",
+                    //     gameEngine: "Game Engine : Unity",
+                    //     description: `The 1945" is a game project created specifically
+                    // for the Joints Game Jam 2023. This game is a
+                    // top-down shooter, but it incorporates unique twists
+                    // and additional features to enhance the gameplay
+                    // experience.`
+                    //     linkUrl: "https://navisraditya.itch.io/the-1945-by-booleh"
+                    // }
                 ];
 
                 const projectsSecondYear = [
                     {
-                        imageSrc: "static/image/Rocateer.png",
+                        imageSrc: "static/image/CourierConquest.jpg",
                         altText: "Project 1",
-                        title: "Rocateer",
-                        gameEngine: "Game Engine : Godot",
-                        description: "A game developed by 'menggeming' team for Garena Game Jam 2023. Players gather gold to construct a rocketship...",
-                        linkUrl: "https://navisraditya.itch.io/rocateer"
+                        title: "Couriers Conquest",
+                        gameEngine: "Game Engine : Unity",
+                        description: "Courier Conquest, developed during my Independent Study program at Agate, is a Genshin Impact-inspired RPG. Players take on the role of a delivery person in the magical world of Eldoria, a realm where ancient magic and modern technology coexist.",
+                        linkUrl: "https://rmdtya.itch.io/couriers-conquest"
+                    },
+                    {
+                        imageSrc: "static/image/Moly.png",
+                        altText: "Project 2",
+                        title: "Molly, Palli-Palli",
+                        gameEngine: "Game Engine : Unity",
+                        description: "Developed for GameJam+, Moly, Palli-Palli is a unique 2D platformer set in a 3D world, inspired by real-life lessons on Occupational Health and Safety. Players navigate as Molly, a resilient character surviving a house fire, while learning critical survival tips such as wetting a towel for breathing, seeking help through alarms, and escaping danger. ",
+                        linkUrl: "https://navisraditya.itch.io/molly-palli-palli"
                     },
                 ];
 
                 function renderCards(elementId, projects) {
-                    let projectCardsContainer = document.getElementById(elementId);
+                    const projectCardsContainer = document.getElementById(elementId);
                     projectCardsContainer.innerHTML = '';
-                    projects.forEach(project => {
+                    projectCardsContainer.classList.add('grid-center');
+
+                    projects.forEach((project) => {
                         const card = `
-                            <div class="card">
-                                <img class="card-image" src="${project.imageSrc}" alt="${project.altText}" />
-                                <h2 class="card-title">${project.title}</h2>
-                                <h2 class="card-game-engine-desc">${project.gameEngine}</h2>
-                                <p class="card-description">${project.description}</p>
-                                <a class="card-button hover:bg-blue-700" href="${project.linkUrl}">More Details</a>
-                            </div>
-                        `;
+                                <div class="card">
+                                    <img class="card-image" src="${project.imageSrc}" alt="${project.altText}" />
+                                    <h2 class="card-title">${project.title}</h2>
+                                    <h2 class="card-game-engine-desc">${project.gameEngine}</h2>
+                                    <p class="card-description">${project.description}</p>
+                                    <a class="card-button hover:bg-blue-700" href="${project.linkUrl}">More Details</a>
+                                </div>
+                            `;
                         projectCardsContainer.insertAdjacentHTML('beforeend', card);
                     });
                 }
@@ -173,19 +200,15 @@
                     </p>
                 </div>
                 <div class="card">
-                    <img class="card-image" src="static/image/pacil.png" alt="fasilkom" />
+                    <img class="card-image" src="static/image/Agate.jpg" alt="Agate" />
                     <h2 class="card-title">
-                        Universitas Indonesia - Teaching Assistent
+                        Agate - Supporting Tech Engineer
                     </h2>
                     <p class="card-description">
-                        Provide assistance to junior college students in
-                        various subjects, offering guidance and support.
-                        Additionally, assist lecturers in preparing homework
-                        assignments and help oversee midterm exams. the role
-                        involves ensuring that students have a comprehensive
-                        understanding of the subjects they are studying and
-                        providing any necessary support to both students and
-                        lecturers.
+                        As a Supporting Tech Engineer intern in the Porting Division at Agate, I worked extensively with
+                        Unreal Engine, focusing on mastering advanced features such as lighting systems, materials, and
+                        the Gameplay Ability System (GAS). I also trying porting game features,
+                        including adapting specific PlayStation 5 functionalities within Unreal Engine.
                     </p>
                 </div>
             </div>
