@@ -174,99 +174,80 @@
             });
         </script>
 
-        <!-- ganti grid cols kalo mau tambah -->
-        <section class="py-8 text-center fade-in">
+        <section class="py-8 text-center fade-in" id="work-experience-section">
             <h1 class="text-4xl font-bold mb-2">Work Experience</h1>
-            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div class="card">
-                    <img class="card-image" src="static/image/kc.jpeg" alt="Kokocoder Group" />
-                    <h2 class="card-title">Kokocoder - Coding Coach</h2>
-                    <p class="card-description">
-                        As a part-time coding coach at Kokocoder since 2021,
-                        and I am currently continuing in this role. the role
-                        focus on teach students to prepare for the OSN
-                        (Olympiad for Informatics). the role involves
-                        assisting them in improving their coding skills and
-                        guiding them in their journey to excel in the
-                        competition.
-                    </p>
-                </div>
-                <div class="card">
-                    <img class="card-image" src="static/image/ikadev-logo.jpeg" alt="Ikadev" />
-                    <h2 class="card-title">Ikadev - Game Programmer</h2>
-                    <p class="card-description">
-                        As a Godot game programmer intern for Sunny Side Crosing Project at Ikadev Studio. I am
-                        currently continuing in this role.
-                    </p>
-                </div>
-                <div class="card">
-                    <img class="card-image" src="static/image/Agate.jpg" alt="Agate" />
-                    <h2 class="card-title">
-                        Agate - Supporting Tech Engineer
-                    </h2>
-                    <p class="card-description">
-                        As a Supporting Tech Engineer intern in the Porting Division at Agate, I worked extensively with
-                        Unreal Engine, focusing on mastering advanced features such as lighting systems, materials, and
-                        the Gameplay Ability System (GAS). I also trying porting game features,
-                        including adapting specific PlayStation 5 functionalities within Unreal Engine.
-                    </p>
-                </div>
-            </div>
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4" id="work-experience-cards"></div>
         </section>
 
-        <!-- ganti grid cols kalo mau tambah -->
-        <section class="py-8 text-center fade-in">
+        <section class="py-8 text-center fade-in" id="award-section">
             <h1 class="text-4xl font-bold mb-2">Award</h1>
-            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="card">
-                    <img class="card-image" src="static/image/icpc.png" alt="ICPC 2022" />
-                    <h2 class="card-title">
-                        The 2022 ICPC Asia Jakarta Regional Contest - Gold
-                        Medalist
-                    </h2>
-                    <p class="card-description">
-                        The ICPC Jakarta competition takes place in Jakarta
-                        and focuses on competitive programming. It is an
-                        event where participants showcase their programming
-                        skills and compete against each other. The
-                        competition is held in Jakarta and serves as a
-                        platform for programmers to demonstrate their
-                        abilities in a challenging environment.
-                    </p>
-                </div>
-                <div class="card">
-                    <img class="card-image" src="static/image/ksn.png" alt="KSN 2020" />
-                    <h2 class="card-title">
-                        KSN Informatika 2020 - Silver Medalist
-                    </h2>
-                    <p class="card-description">
-                        KSN Informatika (Kompetisi Sains Nasional
-                        Informatika) is a short form for the National
-                        Science Competition in Informatics in Indonesia.
-                        Participants are typically high school students who
-                        compete at regional, national, and international
-                        levels. The competition covers various topics
-                        related to computer science, algorithms, data
-                        structures, and software development.
-                    </p>
-                </div>
-                <div class="card">
-                    <img class="card-image" src="static/image/logo-gemastik.png" alt="Gemastik 2022" />
-                    <h2 class="card-title">
-                        Gemastik 2022 cabang Pemprograman - First Place
-                    </h2>
-                    <p class="card-description">
-                        Gemastik programming contest is organized by
-                        Puspresnas and revolves around competitive
-                        programming. It serves as a platform to evaluate
-                        participants' skills in this field. The contest puts
-                        their programming abilities to the test, offering
-                        them a challenging environment to showcase their
-                        talents.
-                    </p>
-                </div>
-            </div>
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" id="award-cards"></div>
         </section>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const workExperiences = [
+                    {
+                        imageSrc: "static/image/kc.jpeg",
+                        altText: "Kokocoder Group",
+                        title: "Kokocoder - Coding Coach",
+                        description: "As a part-time coding coach at Kokocoder since 2021, and I am currently continuing in this role. The role focuses on teaching students to prepare for the OSN (Olympiad for Informatics). The role involves assisting them in improving their coding skills and guiding them in their journey to excel in the competition."
+                    },
+                    {
+                        imageSrc: "static/image/ikadev-logo.jpeg",
+                        altText: "Ikadev",
+                        title: "Ikadev - Game Programmer",
+                        description: "As a Godot game programmer intern for Sunny Side Crossing Project at Ikadev Studio."
+                    },
+                    {
+                        imageSrc: "static/image/Agate.jpg",
+                        altText: "Agate",
+                        title: "Agate - Supporting Tech Engineer",
+                        description: "As a Supporting Tech Engineer intern in the Porting Division at Agate, I worked extensively with Unreal Engine, focusing on mastering advanced features such as lighting systems, materials, and the Gameplay Ability System (GAS). I also worked on porting game features, including adapting specific PlayStation 5 functionalities within Unreal Engine."
+                    }
+                ];
+
+                const awards = [
+                    {
+                        imageSrc: "static/image/icpc.png",
+                        altText: "ICPC 2022",
+                        title: "The 2022 ICPC Asia Jakarta Regional Contest - Gold Medalist",
+                        description: "The ICPC Jakarta competition takes place in Jakarta and focuses on competitive programming. It is an event where participants showcase their programming skills and compete against each other in a challenging environment."
+                    },
+                    {
+                        imageSrc: "static/image/ksn.png",
+                        altText: "KSN 2020",
+                        title: "KSN Informatika 2020 - Silver Medalist",
+                        description: "KSN Informatika (Kompetisi Sains Nasional Informatika) is a National Science Competition in Informatics in Indonesia. Participants are typically high school students competing at regional, national, and international levels."
+                    },
+                    {
+                        imageSrc: "static/image/logo-gemastik.png",
+                        altText: "Gemastik 2022",
+                        title: "Gemastik 2022 cabang Pemprograman - First Place",
+                        description: "Gemastik programming contest is organized by Puspresnas and revolves around competitive programming. It serves as a platform to evaluate participants' skills in this field and offer them a challenging environment to showcase their talents."
+                    }
+                ];
+
+                const workExperienceContainer = document.getElementById('work-experience-cards');
+                const awardContainer = document.getElementById('award-cards');
+
+                function renderCards(container, data) {
+                    data.forEach(item => {
+                        const card = `
+                        <div class="card">
+                            <img class="card-image" src="${item.imageSrc}" alt="${item.altText}" />
+                            <h2 class="card-title">${item.title}</h2>
+                            <p class="card-description">${item.description}</p>
+                        </div>
+                    `;
+                        container.insertAdjacentHTML('beforeend', card);
+                    });
+                }
+
+                renderCards(workExperienceContainer, workExperiences);
+                renderCards(awardContainer, awards);
+            });
+        </script>
         <!-- ganti grid cols kalo mau tambah -->
         <section class="py-8 text-center fade-in" style="margin-bottom: 15px">
             <h1 class="text-4xl font-bold mb-2">Education</h1>
