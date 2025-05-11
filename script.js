@@ -41,12 +41,21 @@ toggleOldGamesBtn.addEventListener('click', function() {
         oldGamesSection.classList.add('show');
         this.classList.add('active');
         this.querySelector('span').textContent = 'Hide Previous Projects';
+        this.classList.remove('slow-pulse'); // Stop animation when shown
     } else {
         oldGamesSection.classList.remove('show');
         this.classList.remove('active');
         this.querySelector('span').textContent = 'Show Previous Projects';
+        this.classList.add('slow-pulse'); // Start animation when hidden
     }
 });
+
+// On page load, ensure the button pulses if oldGames is hidden
+if (oldGamesSection && !oldGamesSection.classList.contains('show')) {
+    toggleOldGamesBtn.classList.add('slow-pulse');
+} else {
+    toggleOldGamesBtn.classList.remove('slow-pulse');
+}
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -152,17 +161,17 @@ function createProjectModal(project) {
                         
                         <h3 class="text-xl font-bold mb-3 text-indigo-300">Technical Highlights</h3>
                         <div class="bg-gray-700 rounded-lg p-4 mb-6">
-                            <code class="text-gray-200 text-sm">${project.details.codeSnippet}</code>
+                            <code class="text-gray-200 text-sm whitespace-pre-wrap break-words">${project.details.codeSnippet}</code>
                         </div>
                         
                         <div class="flex justify-between items-center">
                             <div>
-                                <a href="#" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
-                                    <i class="fas fa-play mr-2"></i> Watch Trailer
+                                <a href="${project.itchioUrl || '#'}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                                    <i class="fab fa-itch-io mr-2"></i> View on itch.io
                                 </a>
                             </div>
                             <div>
-                                <a href="#" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                                <a href="${project.githubUrl || '#'}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
                                     <i class="fab fa-github mr-2"></i> View Code
                                 </a>
                             </div>
@@ -174,27 +183,67 @@ function createProjectModal(project) {
     `;
 }
 
+// Function to create expanded project card for Featured and R&D
+function createExpandedProjectCard(project) {
+    return `
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover p-8 mb-8 w-full">
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="flex-shrink-0 w-full md:w-96 h-64 overflow-hidden rounded-lg mb-6 md:mb-0">
+                    <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">${project.title}</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${project.tags.map(tag => `<span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">${tag}</span>`).join('')}
+                        </div>
+                        <p class="text-gray-300 mb-4">${project.description}</p>
+                        <h4 class="text-lg font-semibold text-indigo-300 mb-2">Project Overview</h4>
+                        <p class="text-gray-300 mb-4">${project.details.overview}</p>
+                        <h4 class="text-lg font-semibold text-indigo-300 mb-2">My Contributions</h4>
+                        <ul class="list-disc pl-5 text-gray-300 space-y-2 mb-4">
+                            ${project.details.contributions.map(contribution => `<li>${contribution}</li>`).join('')}
+                        </ul>
+                        ${project.showTechnicalHighlights ? `
+                        <h4 class="text-lg font-semibold text-indigo-300 mb-2">Technical Highlights</h4>
+                        <div class="bg-gray-700 rounded-lg p-4 mb-4 overflow-x-auto">
+                            <code class="text-gray-200 text-sm whitespace-pre-wrap break-words">${project.details.codeSnippet}</code>
+                        </div>
+                        ` : ''}
+                    </div>
+                    <div class="flex justify-between items-center mt-6">
+                        <a href="${project.itchioUrl || '#'}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                            <i class="fab fa-itch-io mr-2"></i> View on itch.io
+                        </a>
+                        <a href="${project.githubUrl || '#'}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                            <i class="fab fa-github mr-2"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
 // Function to render all projects
 function renderProjects() {
-    // Render featured projects
+    // Render featured projects (expanded, one per row)
     const featuredContainer = document.querySelector('#games .grid');
-    featuredContainer.innerHTML = projects.featured.map(createProjectCard).join('');
+    featuredContainer.className = 'grid grid-cols-1 gap-8';
+    featuredContainer.innerHTML = projects.featured.map(createExpandedProjectCard).join('');
 
-    // Render previous projects
+    // Render previous projects (as before)
     const previousContainer = document.querySelector('#oldGames');
     previousContainer.innerHTML = projects.previous.map(createProjectCard).join('');
 
-    // Render R&D projects
+    // Render R&D projects (expanded, one per row)
     const rndContainer = document.querySelector('#rnd .grid');
-    rndContainer.innerHTML = projects.rnd.map(createProjectCard).join('');
+    rndContainer.className = 'grid grid-cols-1 gap-8';
+    rndContainer.innerHTML = projects.rnd.map(createExpandedProjectCard).join('');
 
-    // Render all modals
+    // Render all modals (only for previous projects)
     const modalContainer = document.createElement('div');
-    modalContainer.innerHTML = [
-        ...projects.featured,
-        ...projects.previous,
-        ...projects.rnd
-    ].map(createProjectModal).join('');
+    modalContainer.innerHTML = projects.previous.map(createProjectModal).join('');
     document.body.appendChild(modalContainer);
 }
 
@@ -273,4 +322,58 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typeof renderProjects === 'function') {
         renderProjects();
     }
-}); 
+
+    // Render work experience dynamically
+    renderExperience();
+    renderEducation();
+    renderAwards();
+});
+
+// Render work experience dynamically
+function renderExperience() {
+  const container = document.getElementById('experience-timeline');
+  if (!container || typeof workExperience === 'undefined') return;
+  container.innerHTML = workExperience.map(exp => `
+    <div class="mb-8">
+      <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+          <h3 class="text-xl font-bold">${exp.role}</h3>
+          <span class="text-indigo-400 font-medium">${exp.start} - ${exp.end}</span>
+        </div>
+        <h4 class="text-lg text-indigo-300 mb-2">${exp.company}${exp.location ? ' - ' + exp.location : ''}</h4>
+        <p class="text-gray-300 mb-2">${exp.description}</p>
+        <ul class="list-disc pl-5 text-gray-300 space-y-2">
+          ${exp.achievements.map(a => `<li>${a}</li>`).join('')}
+        </ul>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderEducation() {
+  const container = document.getElementById('education-list');
+  if (!container || typeof education === 'undefined') return;
+  container.innerHTML = education.map(edu => `
+    <div class="bg-gray-800 rounded-xl p-8 shadow-lg mb-6 flex items-center">
+      ${edu.image ? `<img src="${edu.image}" alt="${edu.school} logo" class="w-16 h-16 rounded-full mr-6 object-contain">` : ''}
+      <div>
+        <h3 class="text-xl font-bold">${edu.school}</h3>
+        <h4 class="text-indigo-300">${edu.degree}</h4>
+        <div class="mb-2 text-indigo-400 font-medium">${edu.period}</div>
+        <p class="text-gray-300">${edu.description}</p>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderAwards() {
+  const container = document.getElementById('awards-list');
+  if (!container || typeof awards === 'undefined') return;
+  container.innerHTML = awards.map(award => `
+    <div class="bg-gray-800 rounded-xl p-6 shadow-lg flex flex-col items-center text-center mb-6">
+      ${award.image ? `<img src="${award.image}" alt="${award.title} icon" class="w-20 h-20 rounded-full bg-indigo-900 mb-4 object-contain">` : ''}
+      <h3 class="text-xl font-bold mb-2">${award.title}</h3>
+      <p class="text-gray-300">${award.description}</p>
+    </div>
+  `).join('');
+} 

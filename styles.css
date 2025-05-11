@@ -110,4 +110,12 @@ body {
 
 #games:has(#oldGames:not(.show)) {
     padding-bottom: 0;
+}
+
+@keyframes slow-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+.slow-pulse {
+  animation: slow-pulse 2s infinite;
 } 

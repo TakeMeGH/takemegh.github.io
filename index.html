@@ -100,7 +100,7 @@
         <div>
             <div class="flex justify-between items-center mb-8">
                 <h3 class="text-2xl font-bold text-indigo-300">Previous Projects</h3>
-                <button id="toggleOldGames" class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center">
+                <button id="toggleOldGames" class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center slow-pulse">
                     <span>Show Previous Projects</span>
                     <i class="fas fa-chevron-down ml-2 transition-transform"></i>
                 </button>
@@ -129,62 +129,7 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Work Experience</h2>
             <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
         </div>
-        
-        <div class="relative">
-            <!-- Timeline Item 1 -->
-            <div class="timeline-item relative pl-8 pb-8">
-                <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-indigo-500 z-10"></div>
-                <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-                        <h3 class="text-xl font-bold">Senior Game Developer</h3>
-                        <span class="text-indigo-400 font-medium">2021 - Present</span>
-                    </div>
-                    <h4 class="text-lg text-indigo-300 mb-2">Epic Games Studio</h4>
-                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
-                        <li>Led development of core gameplay systems for AAA title with 50+ team members</li>
-                        <li>Optimized rendering pipeline resulting in 30% performance improvement</li>
-                        <li>Implemented advanced AI behaviors using utility-based decision making</li>
-                        <li>Mentored junior developers and conducted code reviews</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Timeline Item 2 -->
-            <div class="timeline-item relative pl-8 pb-8">
-                <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-indigo-500 z-10"></div>
-                <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-                        <h3 class="text-xl font-bold">Gameplay Programmer</h3>
-                        <span class="text-indigo-400 font-medium">2018 - 2021</span>
-                    </div>
-                    <h4 class="text-lg text-indigo-300 mb-2">Indie Game Collective</h4>
-                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
-                        <li>Developed core mechanics for 5 shipped indie titles across multiple platforms</li>
-                        <li>Created custom tools for level designers to streamline workflow</li>
-                        <li>Implemented networked multiplayer with rollback netcode</li>
-                        <li>Optimized mobile performance to maintain 60fps on mid-range devices</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Timeline Item 3 -->
-            <div class="timeline-item relative pl-8">
-                <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-indigo-500 z-10"></div>
-                <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-                        <h3 class="text-xl font-bold">Technical Artist Intern</h3>
-                        <span class="text-indigo-400 font-medium">2017 - 2018</span>
-                    </div>
-                    <h4 class="text-lg text-indigo-300 mb-2">Digital Arts Studio</h4>
-                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
-                        <li>Created shaders and VFX for in-game environments and characters</li>
-                        <li>Developed pipeline tools for art team to automate repetitive tasks</li>
-                        <li>Assisted in performance profiling and optimization</li>
-                        <li>Implemented procedural generation systems for background elements</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <div class="relative" id="experience-timeline"></div>
     </section>
 
     <!-- Education Section -->
@@ -193,46 +138,7 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Education</h2>
             <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
         </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Education 1 -->
-            <div class="bg-gray-800 rounded-xl p-8 shadow-lg">
-                <div class="flex items-center mb-4">
-                    <div class="w-16 h-16 rounded-full bg-indigo-900 flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-2xl text-indigo-400"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold">Master of Science</h3>
-                        <h4 class="text-indigo-300">Game Technology</h4>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <span class="text-indigo-400 font-medium">2015 - 2017</span>
-                    <span class="mx-2">|</span>
-                    <span>University of Digital Arts</span>
-                </div>
-                <p class="text-gray-300">Specialized in real-time graphics programming and advanced game physics. Thesis on "Real-Time Fluid Simulation for Games" received distinction.</p>
-            </div>
-            
-            <!-- Education 2 -->
-            <div class="bg-gray-800 rounded-xl p-8 shadow-lg">
-                <div class="flex items-center mb-4">
-                    <div class="w-16 h-16 rounded-full bg-indigo-900 flex items-center justify-center mr-4">
-                        <i class="fas fa-laptop-code text-2xl text-indigo-400"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold">Bachelor of Science</h3>
-                        <h4 class="text-indigo-300">Computer Science</h4>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <span class="text-indigo-400 font-medium">2011 - 2015</span>
-                    <span class="mx-2">|</span>
-                    <span>Tech Institute</span>
-                </div>
-                <p class="text-gray-300">Focus on software engineering with emphasis on computer graphics. Minor in Mathematics. Graduated with honors.</p>
-            </div>
-        </div>
+        <div id="education-list"></div>
     </section>
 
     <!-- Awards Section -->
@@ -241,38 +147,7 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Awards & Achievements</h2>
             <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
         </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Award 1 -->
-            <div class="bg-gray-800 rounded-xl p-6 shadow-lg flex flex-col items-center text-center">
-                <div class="w-20 h-20 rounded-full bg-indigo-900 flex items-center justify-center mb-4">
-                    <i class="fas fa-trophy text-3xl text-yellow-400"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Best Technical Achievement</h3>
-                <p class="text-indigo-300 mb-2">Game Developers Conference 2022</p>
-                <p class="text-gray-300">Awarded for innovative rendering techniques in "Cosmic Adventure"</p>
-            </div>
-            
-            <!-- Award 2 -->
-            <div class="bg-gray-800 rounded-xl p-6 shadow-lg flex flex-col items-center text-center">
-                <div class="w-20 h-20 rounded-full bg-indigo-900 flex items-center justify-center mb-4">
-                    <i class="fas fa-medal text-3xl text-yellow-400"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Indie Game of the Year</h3>
-                <p class="text-indigo-300 mb-2">Independent Games Festival 2020</p>
-                <p class="text-gray-300">Recognized for "Pixel Quest" innovative gameplay mechanics</p>
-            </div>
-            
-            <!-- Award 3 -->
-            <div class="bg-gray-800 rounded-xl p-6 shadow-lg flex flex-col items-center text-center">
-                <div class="w-20 h-20 rounded-full bg-indigo-900 flex items-center justify-center mb-4">
-                    <i class="fas fa-award text-3xl text-yellow-400"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Technical Excellence Award</h3>
-                <p class="text-indigo-300 mb-2">SIGGRAPH 2019</p>
-                <p class="text-gray-300">For research in real-time global illumination techniques</p>
-            </div>
-        </div>
+        <div id="awards-list" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
     </section>
 
     <!-- Footer -->
@@ -635,6 +510,9 @@ vec3 ConeTraceDiffuse(vec3 origin, vec3 direction, float tanHalfAngle) {<br/>
 
     <script src="projects.js"></script>
     <script src="profile.js"></script>
+    <script src="experience.js"></script>
+    <script src="education.js"></script>
+    <script src="awards.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
