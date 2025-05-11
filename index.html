@@ -53,9 +53,18 @@
     <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-indigo-400">Alex</span></h1>
-                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-indigo-300">Game Developer & Technical Artist</h2>
-                <p class="text-lg text-gray-300 mb-8">Passionate about creating immersive gaming experiences and pushing the boundaries of real-time graphics technology.</p>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span id="profile-name" class="text-indigo-400">Alex</span></h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-indigo-300">Game Developer</h2>
+                <p id="profile-description" class="text-lg text-gray-300 mb-8">Passionate about creating immersive gaming experiences and pushing the boundaries of real-time graphics technology.</p>
+                <div class="flex items-center space-x-3 mb-8">
+                    <span id="profile-email" class="text-gray-100 text-lg font-medium">abdulrafi907@gmail.com</span>
+                    <button onclick="copyEmail()" class="ml-2 text-gray-400 hover:text-indigo-400 transition" title="Copy email">
+                        <i class="far fa-copy text-lg"></i>
+                    </button>
+                </div>
+                <div id="profile-social" class="flex space-x-6 mb-8">
+                    <!-- Social links will be rendered here -->
+                </div>
                 <div class="flex space-x-4">
                     <a href="#games" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">View My Work</a>
                     <a href="#contact" class="px-6 py-3 border border-indigo-400 text-indigo-400 rounded-lg hover:bg-indigo-900 transition">Contact Me</a>
@@ -63,7 +72,7 @@
             </div>
             <div class="md:w-1/2 flex justify-center">
                 <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-500">
-                    <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Profile" class="w-full h-full object-cover">
+                    <img src="static/image/2106630113_FotoDiri.jpg" alt="Profile" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
@@ -80,39 +89,7 @@
         <div class="mb-16">
             <h3 class="text-2xl font-bold mb-8 text-indigo-300">Featured Projects</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Game Project 1 -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Game Project" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Cosmic Adventure</h3>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Unity</span>
-                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">C#</span>
-                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Shader Graph</span>
-                        </div>
-                        <p class="text-gray-300 mb-4">A space exploration game with procedurally generated planets and dynamic weather systems.</p>
-                        <button onclick="openModal('modal1')" class="text-indigo-400 hover:text-indigo-300 font-medium">View Details →</button>
-                    </div>
-                </div>
-                
-                <!-- Game Project 2 -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1551103782-8ab0493f16a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Game Project" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Shadow Tactics</h3>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Unreal Engine</span>
-                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">C++</span>
-                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Blueprint</span>
-                        </div>
-                        <p class="text-gray-300 mb-4">A stealth-based strategy game with advanced AI behavior trees and dynamic lighting.</p>
-                        <button onclick="openModal('modal2')" class="text-indigo-400 hover:text-indigo-300 font-medium">View Details →</button>
-                    </div>
-                </div>
+                <!-- Projects will be dynamically inserted here -->
             </div>
         </div>
 
@@ -126,22 +103,7 @@
                 </button>
             </div>
             <div id="oldGames" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 hidden">
-                <!-- Game Project 3 -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Game Project" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Pixel Quest</h3>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Godot</span>
-                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">GDScript</span>
-                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Pixel Art</span>
-                        </div>
-                        <p class="text-gray-300 mb-4">A retro-style RPG with custom physics engine and dialogue system.</p>
-                        <button onclick="openModal('modal3')" class="text-indigo-400 hover:text-indigo-300 font-medium">View Details →</button>
-                    </div>
-                </div>
+                <!-- Previous projects will be dynamically inserted here -->
             </div>
         </div>
     </section>
@@ -154,39 +116,7 @@
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- R&D Project 1 -->
-            <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover">
-                <div class="h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="R&D Project" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">Procedural Terrain Generation</h3>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">HLSL</span>
-                        <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Compute Shaders</span>
-                        <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Noise Algorithms</span>
-                    </div>
-                    <p class="text-gray-300 mb-4">Research into GPU-accelerated terrain generation with dynamic LOD and biome blending.</p>
-                    <button onclick="openModal('modal4')" class="text-indigo-400 hover:text-indigo-300 font-medium">View Details →</button>
-                </div>
-            </div>
-            
-            <!-- R&D Project 2 -->
-            <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover">
-                <div class="h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1639762681057-1e71aacd134c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="R&D Project" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">Real-Time Global Illumination</h3>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Vulkan</span>
-                        <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Ray Tracing</span>
-                        <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">SDF</span>
-                    </div>
-                    <p class="text-gray-300 mb-4">Exploring techniques for dynamic lighting with signed distance fields and voxel cone tracing.</p>
-                    <button onclick="openModal('modal5')" class="text-indigo-400 hover:text-indigo-300 font-medium">View Details →</button>
-                </div>
-            </div>
+            <!-- R&D projects will be dynamically inserted here -->
         </div>
     </section>
 
@@ -338,55 +268,6 @@
                 <h3 class="text-xl font-bold mb-2">Technical Excellence Award</h3>
                 <p class="text-indigo-300 mb-2">SIGGRAPH 2019</p>
                 <p class="text-gray-300">For research in real-time global illumination techniques</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-800 bg-opacity-50 rounded-xl">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-            <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
-        </div>
-        
-        <div class="max-w-3xl mx-auto">
-            <form class="space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Name</label>
-                        <input type="text" id="name" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
-                        <input type="email" id="email" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400">
-                    </div>
-                </div>
-                <div>
-                    <label for="subject" class="block text-sm font-medium text-gray-300 mb-1">Subject</label>
-                    <input type="text" id="subject" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400">
-                </div>
-                <div>
-                    <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
-                    <textarea id="message" rows="5" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400"></textarea>
-                </div>
-                <div class="flex justify-center">
-                    <button type="submit" class="px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition font-medium">Send Message</button>
-                </div>
-            </form>
-            
-            <div class="mt-12 flex justify-center space-x-6">
-                <a href="#" class="text-gray-300 hover:text-indigo-400 transition">
-                    <i class="fab fa-twitter text-2xl"></i>
-                </a>
-                <a href="#" class="text-gray-300 hover:text-indigo-400 transition">
-                    <i class="fab fa-linkedin text-2xl"></i>
-                </a>
-                <a href="#" class="text-gray-300 hover:text-indigo-400 transition">
-                    <i class="fab fa-github text-2xl"></i>
-                </a>
-                <a href="#" class="text-gray-300 hover:text-indigo-400 transition">
-                    <i class="fab fa-itch-io text-2xl"></i>
-                </a>
             </div>
         </div>
     </section>
@@ -749,6 +630,8 @@ vec3 ConeTraceDiffuse(vec3 origin, vec3 direction, float tanHalfAngle) {<br/>
         </div>
     </div>
 
+    <script src="projects.js"></script>
+    <script src="profile.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
