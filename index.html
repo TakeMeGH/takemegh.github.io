@@ -1,470 +1,754 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Abdul Rafi</title>
-    <link rel="icon" type="image/x-icon" href="static/image/favicon.ico" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="Description" lang="en" content="open source html and css template" />
-    <meta name="author" content="mlp design" />
-    <meta name="robots" content="index, follow" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="static/style.css" />
-    <style></style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
-<body class="font-sans">
-    <div class="container mx-auto px-4">
-        <section class="py-8 text-center fade-in" style="margin-bottom: 0px">
-            <h1 class="text-4xl font-bold mb-2">Abdul Rafi</h1>
-
-            <div class="mt-4">
-                <div class="centered-list">
-                    <img class="profile-image" src="static/image/2106630113_FotoDiri.jpg" alt="Profile Image" />
-                    <div class="flex flex-col ml-4">
-                        <div class="flex items-center">
-                            <div class="feedback-email">
-                                <img src="static/image/gmail.png" style="width: 50px; height: 50px" />
-                                <p class="ml-2" id="email">
-                                    abdulrafi907@gmail.com
-                                </p>
-                            </div>
-                        </div>
+<body class="gradient-bg text-gray-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-900 bg-opacity-90 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-indigo-400">DEV PORTFOLIO</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-indigo-700 transition">Home</a>
+                        <a href="#games" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-indigo-700 transition">Games</a>
+                        <a href="#rnd" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-indigo-700 transition">R&D</a>
+                        <a href="#experience" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-indigo-700 transition">Experience</a>
+                        <a href="#education" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-indigo-700 transition">Education</a>
+                        <a href="#awards" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-indigo-700 transition">Awards</a>
                     </div>
-                    <div class="social-icons">
-                        <a class="text-blue-500 hover:text-blue-300" href="https://github.com/TakeMeGH">
-                            <img src="static/image/github (2).png" alt="github" />
-                        </a>
-                        <a class="text-blue-500 hover:text-blue-300" href="https://www.linkedin.com/in/abdul-rafi/">
-                            <img src="static/image/linkedin (2).png" alt="LinkedIn" />
-                        </a>
-                        <a class="text-blue-500 hover:text-blue-300" href="https://www.instagram.com/abdul_rafiii/">
-                            <img src="static/image/instagram (2).png" alt="instagram" />
-                        </a>
-                        <a class="text-blue-500 hover:text-blue-300" href="https://takemegh.itch.io/">
-                            <img src="static/image/itchio.png" alt="itch.io" />
-                        </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-indigo-700">Home</a>
+                <a href="#games" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-indigo-700">Games</a>
+                <a href="#rnd" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-indigo-700">R&D</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-indigo-700">Experience</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-indigo-700">Education</a>
+                <a href="#awards" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-indigo-700">Awards</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-indigo-400">Alex</span></h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-indigo-300">Game Developer & Technical Artist</h2>
+                <p class="text-lg text-gray-300 mb-8">Passionate about creating immersive gaming experiences and pushing the boundaries of real-time graphics technology.</p>
+                <div class="flex space-x-4">
+                    <a href="#games" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">View My Work</a>
+                    <a href="#contact" class="px-6 py-3 border border-indigo-400 text-indigo-400 rounded-lg hover:bg-indigo-900 transition">Contact Me</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-500">
+                    <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Profile" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Game Projects</h2>
+            <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
+        </div>
+        
+        <!-- Featured Games -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-bold mb-8 text-indigo-300">Featured Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Game Project 1 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Game Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Cosmic Adventure</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Unity</span>
+                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">C#</span>
+                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Shader Graph</span>
+                        </div>
+                        <p class="text-gray-300 mb-4">A space exploration game with procedurally generated planets and dynamic weather systems.</p>
+                        <button onclick="openModal('modal1')" class="text-indigo-400 hover:text-indigo-300 font-medium">View Details →</button>
+                    </div>
+                </div>
+                
+                <!-- Game Project 2 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551103782-8ab0493f16a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Game Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Shadow Tactics</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Unreal Engine</span>
+                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">C++</span>
+                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Blueprint</span>
+                        </div>
+                        <p class="text-gray-300 mb-4">A stealth-based strategy game with advanced AI behavior trees and dynamic lighting.</p>
+                        <button onclick="openModal('modal2')" class="text-indigo-400 hover:text-indigo-300 font-medium">View Details →</button>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="py-8 text-center fade-in" style="margin-bottom: 0px">
-            <p class="text-center-lg">
-                I am a enthusiastic programmer who finds immense joy in the
-                fusion of coding and algorithms within the realm of game
-                development, where I can bring my creative ideas to life
-                through immersive gameplay experiences. As a competitive
-                programmer, I thrive on the challenges presented by
-                intricate algorithms, constantly seeking innovative
-                solutions and honing my skills to excel in competitive
-                coding competitions.
-            </p>
-            <h1 class="py-8 text-3xl">CV</h1>
-            <a class="card-button hover:bg-blue-700"
-                href="https://docs.google.com/document/d/1z0XRGCpPVwsF2rmpqs1HYQ_MY2OlKKxf/edit?usp=sharing&ouid=105857952239014899947&rtpof=true&sd=true">Open
-                My Latest CV</a>
-        </section>
-        <section class="py-8 text-center fade-in relative">
-            <h1 class="text-4xl font-bold mb-2">Projects Second Year</h1>
-            <div id="project-second-year-cards" class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 relative"></div>
-        </section>
+        </div>
 
-        <section class="py-8 text-center fade-in relative">
-            <h1 class="text-4xl font-bold mb-2">Projects First Year</h1>
-            <div id="project-first-year-cards" class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 relative"></div>
-        </section>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const projectsFirstYear = [
-                    {
-                        imageSrc: "static/image/Rocateer.png",
-                        altText: "Project 1",
-                        title: "Rocateer",
-                        gameEngine: "Game Engine : Godot",
-                        description: `A game developed by "menggeming" team for Garena Game Jam 2023. Players gather gold to construct
-                        a rocketship, dealing with a decreasing hunger level that imposes a time constraint on their
-                        journey.
-                        Players leverage their demise as a strategic feature, using death to upgrade and enhance their
-                        perks in this unique gaming experience.`,
-                        linkUrl: "https://navisraditya.itch.io/rocateer"
-                    },
-                    {
-                        imageSrc: "static/image/compfest-downwell.png",
-                        altText: "Project 2",
-                        title: "Galactic Dive",
-                        gameEngine: "Game Engine : Unity",
-                        description: `Galactic Dive is a project being developed for the
-                        Compfest 2023 website. This game is an endless game.
-                        In this game, the player must earn as many points as
-                        possible by killing enemies, falling deeper, and
-                        surviving as long as possible.`,
-                        linkUrl: "https://takemegh.itch.io/galactic-dive"
-                    },
-                    {
-                        imageSrc: "static/image/Traficky.png",
-                        altText: "Project 3",
-                        title: "Trafficky",
-                        gameEngine: "Game Engine : Unity",
-                        description: `Trafficky is a game designed for the Game
-                        Application Development contest during the GEMASTIK
-                        XVI event series. It's centered on imparting Traffic
-                        Education and Ethics to kids. In Trafficky, players
-                        join forces with Rara, a policewoman, and get to
-                        feel the excitement of overseeing traffic!`,
-                        linkUrl: "https://navisraditya.itch.io/trafficky"
-                    },
-                    // {
-                    //     imageSrc: "static/image/1945.jpg",
-                    //     altText: "Project 4",
-                    //     title: "The 1945",
-                    //     gameEngine: "Game Engine : Unity",
-                    //     description: `The 1945" is a game project created specifically
-                    // for the Joints Game Jam 2023. This game is a
-                    // top-down shooter, but it incorporates unique twists
-                    // and additional features to enhance the gameplay
-                    // experience.`
-                    //     linkUrl: "https://navisraditya.itch.io/the-1945-by-booleh"
-                    // }
-                ];
-
-                const projectsSecondYear = [
-                    {
-                        imageSrc: "static/image/CourierConquest.jpg",
-                        altText: "Project 1",
-                        title: "Couriers Conquest",
-                        gameEngine: "Game Engine : Unity",
-                        description: "Courier Conquest, developed during my Independent Study program at Agate, is a Genshin Impact-inspired RPG. Players take on the role of a delivery person in the magical world of Eldoria, a realm where ancient magic and modern technology coexist.",
-                        linkUrl: "https://rmdtya.itch.io/couriers-conquest"
-                    },
-                    {
-                        imageSrc: "static/image/Moly.png",
-                        altText: "Project 2",
-                        title: "Molly, Palli-Palli",
-                        gameEngine: "Game Engine : Unity",
-                        description: "Developed for GameJam+, Moly, Palli-Palli is a unique 2D platformer set in a 3D world, inspired by real-life lessons on Occupational Health and Safety. Players navigate as Molly, a resilient character surviving a house fire, while learning critical survival tips such as wetting a towel for breathing, seeking help through alarms, and escaping danger. ",
-                        linkUrl: "https://navisraditya.itch.io/molly-palli-palli"
-                    },
-                ];
-
-                function renderCards(elementId, projects) {
-                    const projectCardsContainer = document.getElementById(elementId);
-                    projectCardsContainer.innerHTML = '';
-                    projectCardsContainer.classList.add('grid-center');
-
-                    projects.forEach((project) => {
-                        const card = `
-                                <div class="card">
-                                    <img class="card-image" src="${project.imageSrc}" alt="${project.altText}" />
-                                    <h2 class="card-title">${project.title}</h2>
-                                    <h2 class="card-game-engine-desc">${project.gameEngine}</h2>
-                                    <p class="card-description">${project.description}</p>
-                                    <a class="card-button hover:bg-blue-700" href="${project.linkUrl}">More Details</a>
-                                </div>
-                            `;
-                        projectCardsContainer.insertAdjacentHTML('beforeend', card);
-                    });
-                }
-                renderCards("project-second-year-cards", projectsSecondYear);
-                renderCards("project-first-year-cards", projectsFirstYear);
-                updateButtonState();
-            });
-        </script>
-
-        <section class="py-8 text-center fade-in" id="work-experience-section">
-            <h1 class="text-4xl font-bold mb-2">Work Experience</h1>
-            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4" id="work-experience-cards"></div>
-        </section>
-
-        <section class="py-8 text-center fade-in" id="award-section">
-            <h1 class="text-4xl font-bold mb-2">Award</h1>
-            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" id="award-cards"></div>
-        </section>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const workExperiences = [
-                    {
-                        imageSrc: "static/image/kc.jpeg",
-                        altText: "Kokocoder Group",
-                        title: "Kokocoder - Coding Coach",
-                        description: "As a part-time coding coach at Kokocoder since 2021, and I am currently continuing in this role. The role focuses on teaching students to prepare for the OSN (Olympiad for Informatics). The role involves assisting them in improving their coding skills and guiding them in their journey to excel in the competition."
-                    },
-                    {
-                        imageSrc: "static/image/ikadev-logo.jpeg",
-                        altText: "Ikadev",
-                        title: "Ikadev - Game Programmer",
-                        description: "As a Godot game programmer intern for Sunny Side Crossing Project at Ikadev Studio."
-                    },
-                    {
-                        imageSrc: "static/image/Agate.jpg",
-                        altText: "Agate",
-                        title: "Agate - Supporting Tech Engineer",
-                        description: "As a Supporting Tech Engineer intern in the Porting Division at Agate, I worked extensively with Unreal Engine, focusing on mastering advanced features such as lighting systems, materials, and the Gameplay Ability System (GAS). I also worked on porting game features, including adapting specific PlayStation 5 functionalities within Unreal Engine."
-                    }
-                ];
-
-                const awards = [
-                    {
-                        imageSrc: "static/image/icpc.png",
-                        altText: "ICPC 2022",
-                        title: "The 2022 ICPC Asia Jakarta Regional Contest - Gold Medalist",
-                        description: "The ICPC Jakarta competition takes place in Jakarta and focuses on competitive programming. It is an event where participants showcase their programming skills and compete against each other in a challenging environment."
-                    },
-                    {
-                        imageSrc: "static/image/ksn.png",
-                        altText: "KSN 2020",
-                        title: "KSN Informatika 2020 - Silver Medalist",
-                        description: "KSN Informatika (Kompetisi Sains Nasional Informatika) is a National Science Competition in Informatics in Indonesia. Participants are typically high school students competing at regional, national, and international levels."
-                    },
-                    {
-                        imageSrc: "static/image/logo-gemastik.png",
-                        altText: "Gemastik 2022",
-                        title: "Gemastik 2022 cabang Pemprograman - First Place",
-                        description: "Gemastik programming contest is organized by Puspresnas and revolves around competitive programming. It serves as a platform to evaluate participants' skills in this field and offer them a challenging environment to showcase their talents."
-                    }
-                ];
-
-                const workExperienceContainer = document.getElementById('work-experience-cards');
-                const awardContainer = document.getElementById('award-cards');
-
-                function renderCards(container, data) {
-                    data.forEach(item => {
-                        const card = `
-                        <div class="card">
-                            <img class="card-image" src="${item.imageSrc}" alt="${item.altText}" />
-                            <h2 class="card-title">${item.title}</h2>
-                            <p class="card-description">${item.description}</p>
+        <!-- Old Games -->
+        <div>
+            <div class="flex justify-between items-center mb-8">
+                <h3 class="text-2xl font-bold text-indigo-300">Previous Projects</h3>
+                <button id="toggleOldGames" class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center">
+                    <span>Show Previous Projects</span>
+                    <i class="fas fa-chevron-down ml-2 transition-transform"></i>
+                </button>
+            </div>
+            <div id="oldGames" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 hidden">
+                <!-- Game Project 3 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Game Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Pixel Quest</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Godot</span>
+                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">GDScript</span>
+                            <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Pixel Art</span>
                         </div>
-                    `;
-                        container.insertAdjacentHTML('beforeend', card);
-                    });
-                }
-
-                renderCards(workExperienceContainer, workExperiences);
-                renderCards(awardContainer, awards);
-            });
-        </script>
-        <!-- ganti grid cols kalo mau tambah -->
-        <section class="py-8 text-center fade-in" style="margin-bottom: 15px">
-            <h1 class="text-4xl font-bold mb-2">Education</h1>
-            <div class="mt-4 grid grid-cols-1 gap-4">
-                <div class="card">
-                    <img class="card-image" src="static/image/ui.png" alt="Universitas Indonesia" />
-                    <h2 class="card-title">
-                        Universitas Indonesia - Computer Science
-                    </h2>
-                    <p class="card-description">
-                        Currently undergoing a bachelor degree in Computer
-                        Science at Universitas Indonesia.
-                    </p>
+                        <p class="text-gray-300 mb-4">A retro-style RPG with custom physics engine and dialogue system.</p>
+                        <button onclick="openModal('modal3')" class="text-indigo-400 hover:text-indigo-300 font-medium">View Details →</button>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Modal Templates -->
-        <div id="modal1" class="modal">
-            <div class="modal-content" style="max-width: 960px">
-                <span class="modal-close">&times;</span>
-                <h2 class="modal-title">The 1945</h2>
-                <p class="modal-description">
-                    "The 1945" is a 2D top-down shooter game that I
-                    developed during a one-week game jam. The game's
-                    mechanics revolve around the player's gun, which has the
-                    ability to kill other players who have the same color as
-                    the gun.The main focus of the game is to provide players
-                    with a chaotic experience where they must dodge enemy
-                    attacks, eliminate enemies, and quickly adjust the color
-                    of their gun. This creates a challenging gameplay
-                    situation that requires quick reflexes and precise
-                    aiming.
-                </p>
-                <iframe width="100%" height="540" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+    <!-- R&D Section -->
+    <section id="rnd" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-800 bg-opacity-50 rounded-xl">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Research & Development</h2>
+            <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- R&D Project 1 -->
+            <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="R&D Project" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Procedural Terrain Generation</h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">HLSL</span>
+                        <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Compute Shaders</span>
+                        <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Noise Algorithms</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">Research into GPU-accelerated terrain generation with dynamic LOD and biome blending.</p>
+                    <button onclick="openModal('modal4')" class="text-indigo-400 hover:text-indigo-300 font-medium">View Details →</button>
+                </div>
+            </div>
+            
+            <!-- R&D Project 2 -->
+            <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1639762681057-1e71aacd134c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="R&D Project" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Real-Time Global Illumination</h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Vulkan</span>
+                        <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">Ray Tracing</span>
+                        <span class="px-2 py-1 bg-indigo-900 text-indigo-200 rounded-full text-xs">SDF</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">Exploring techniques for dynamic lighting with signed distance fields and voxel cone tracing.</p>
+                    <button onclick="openModal('modal5')" class="text-indigo-400 hover:text-indigo-300 font-medium">View Details →</button>
+                </div>
             </div>
         </div>
-        <div id="modal2" class="modal">
-            <div class="modal-content" style="max-width: 960px; max-height: 540px">
-                <span class="modal-close">&times;</span>
-                <h2 class="modal-title">Project 2</h2>
-                <p class="modal-description">
-                    Detailed description of Project 2
-                </p>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Work Experience</h2>
+            <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
+        </div>
+        
+        <div class="relative">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item relative pl-8 pb-8">
+                <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-indigo-500 z-10"></div>
+                <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                        <h3 class="text-xl font-bold">Senior Game Developer</h3>
+                        <span class="text-indigo-400 font-medium">2021 - Present</span>
+                    </div>
+                    <h4 class="text-lg text-indigo-300 mb-2">Epic Games Studio</h4>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
+                        <li>Led development of core gameplay systems for AAA title with 50+ team members</li>
+                        <li>Optimized rendering pipeline resulting in 30% performance improvement</li>
+                        <li>Implemented advanced AI behaviors using utility-based decision making</li>
+                        <li>Mentored junior developers and conducted code reviews</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item relative pl-8 pb-8">
+                <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-indigo-500 z-10"></div>
+                <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                        <h3 class="text-xl font-bold">Gameplay Programmer</h3>
+                        <span class="text-indigo-400 font-medium">2018 - 2021</span>
+                    </div>
+                    <h4 class="text-lg text-indigo-300 mb-2">Indie Game Collective</h4>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
+                        <li>Developed core mechanics for 5 shipped indie titles across multiple platforms</li>
+                        <li>Created custom tools for level designers to streamline workflow</li>
+                        <li>Implemented networked multiplayer with rollback netcode</li>
+                        <li>Optimized mobile performance to maintain 60fps on mid-range devices</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item relative pl-8">
+                <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-indigo-500 z-10"></div>
+                <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                        <h3 class="text-xl font-bold">Technical Artist Intern</h3>
+                        <span class="text-indigo-400 font-medium">2017 - 2018</span>
+                    </div>
+                    <h4 class="text-lg text-indigo-300 mb-2">Digital Arts Studio</h4>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
+                        <li>Created shaders and VFX for in-game environments and characters</li>
+                        <li>Developed pipeline tools for art team to automate repetitive tasks</li>
+                        <li>Assisted in performance profiling and optimization</li>
+                        <li>Implemented procedural generation systems for background elements</li>
+                    </ul>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Feedback Pop-up -->
-        <div id="feedback-popup" class="feedback-popup hidden">
-            <div class="feedback-content">
-                <p class="feedback-description">
-                    Email copied to clipboard!
-                </p>
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-800 bg-opacity-50 rounded-xl">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Education</h2>
+            <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Education 1 -->
+            <div class="bg-gray-800 rounded-xl p-8 shadow-lg">
+                <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 rounded-full bg-indigo-900 flex items-center justify-center mr-4">
+                        <i class="fas fa-graduation-cap text-2xl text-indigo-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Master of Science</h3>
+                        <h4 class="text-indigo-300">Game Technology</h4>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <span class="text-indigo-400 font-medium">2015 - 2017</span>
+                    <span class="mx-2">|</span>
+                    <span>University of Digital Arts</span>
+                </div>
+                <p class="text-gray-300">Specialized in real-time graphics programming and advanced game physics. Thesis on "Real-Time Fluid Simulation for Games" received distinction.</p>
+            </div>
+            
+            <!-- Education 2 -->
+            <div class="bg-gray-800 rounded-xl p-8 shadow-lg">
+                <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 rounded-full bg-indigo-900 flex items-center justify-center mr-4">
+                        <i class="fas fa-laptop-code text-2xl text-indigo-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Bachelor of Science</h3>
+                        <h4 class="text-indigo-300">Computer Science</h4>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <span class="text-indigo-400 font-medium">2011 - 2015</span>
+                    <span class="mx-2">|</span>
+                    <span>Tech Institute</span>
+                </div>
+                <p class="text-gray-300">Focus on software engineering with emphasis on computer graphics. Minor in Mathematics. Graduated with honors.</p>
             </div>
         </div>
+    </section>
 
-        <script>
-            // Get all modal elements
-            const modals = document.querySelectorAll(".modal");
+    <!-- Awards Section -->
+    <section id="awards" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Awards & Achievements</h2>
+            <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Award 1 -->
+            <div class="bg-gray-800 rounded-xl p-6 shadow-lg flex flex-col items-center text-center">
+                <div class="w-20 h-20 rounded-full bg-indigo-900 flex items-center justify-center mb-4">
+                    <i class="fas fa-trophy text-3xl text-yellow-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Best Technical Achievement</h3>
+                <p class="text-indigo-300 mb-2">Game Developers Conference 2022</p>
+                <p class="text-gray-300">Awarded for innovative rendering techniques in "Cosmic Adventure"</p>
+            </div>
+            
+            <!-- Award 2 -->
+            <div class="bg-gray-800 rounded-xl p-6 shadow-lg flex flex-col items-center text-center">
+                <div class="w-20 h-20 rounded-full bg-indigo-900 flex items-center justify-center mb-4">
+                    <i class="fas fa-medal text-3xl text-yellow-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Indie Game of the Year</h3>
+                <p class="text-indigo-300 mb-2">Independent Games Festival 2020</p>
+                <p class="text-gray-300">Recognized for "Pixel Quest" innovative gameplay mechanics</p>
+            </div>
+            
+            <!-- Award 3 -->
+            <div class="bg-gray-800 rounded-xl p-6 shadow-lg flex flex-col items-center text-center">
+                <div class="w-20 h-20 rounded-full bg-indigo-900 flex items-center justify-center mb-4">
+                    <i class="fas fa-award text-3xl text-yellow-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Technical Excellence Award</h3>
+                <p class="text-indigo-300 mb-2">SIGGRAPH 2019</p>
+                <p class="text-gray-300">For research in real-time global illumination techniques</p>
+            </div>
+        </div>
+    </section>
 
-            // Get all modal open buttons
-            const modalOpenButtons =
-                document.querySelectorAll("[data-modal-id]");
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-800 bg-opacity-50 rounded-xl">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+            <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
+        </div>
+        
+        <div class="max-w-3xl mx-auto">
+            <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400">
+                    </div>
+                </div>
+                <div>
+                    <label for="subject" class="block text-sm font-medium text-gray-300 mb-1">Subject</label>
+                    <input type="text" id="subject" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+                    <textarea id="message" rows="5" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400"></textarea>
+                </div>
+                <div class="flex justify-center">
+                    <button type="submit" class="px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition font-medium">Send Message</button>
+                </div>
+            </form>
+            
+            <div class="mt-12 flex justify-center space-x-6">
+                <a href="#" class="text-gray-300 hover:text-indigo-400 transition">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-300 hover:text-indigo-400 transition">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-300 hover:text-indigo-400 transition">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-300 hover:text-indigo-400 transition">
+                    <i class="fab fa-itch-io text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-            // Get all modal close buttons
-            const modalCloseButtons =
-                document.querySelectorAll(".modal-close");
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">© 2023 Game Developer Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
 
-            // Function to open modal
-            const openModal = (modalId) => {
-                const modal = document.getElementById(modalId);
-                modal.style.display = "flex";
-
-                // Disable scrolling on the body
-                document.body.style.overflow = "hidden";
-            };
-
-            // Function to close modal
-            const closeModal = (modal) => {
-                modal.style.display = "none";
-
-                // Enable scrolling on the body
-                document.body.style.overflow = "auto";
-            };
-
-            // Add event listener to modal open buttons
-            modalOpenButtons.forEach((button) => {
-                button.addEventListener("click", (event) => {
-                    event.preventDefault(); // Prevent the default anchor click behavior
-                    const modalId = button.getAttribute("data-modal-id");
-                    openModal(modalId);
-                });
-            });
-            // Add event listener to modal close buttons
-            modalCloseButtons.forEach((button) => {
-                button.addEventListener("click", () => {
-                    const modal = button.parentElement.parentElement;
-                    closeModal(modal);
-                });
-            });
-
-            // Add event listener to close modal on outside click
-            modals.forEach((modal) => {
-                modal.addEventListener("click", (event) => {
-                    if (event.target === modal) {
-                        closeModal(modal);
-                    }
-                });
-            });
-
-            // Get the email element
-            const emailElement = document.getElementById("email");
-
-            // Get the feedback pop-up elements
-            const feedbackPopup = document.getElementById("feedback-popup");
-            // const feedbackClose = document.querySelector(".feedback-close");
-
-            // Add click event listener to the email element
-            emailElement.addEventListener("click", () => {
-                // Copy the email text to the clipboard
-                const email = emailElement.innerText;
-                navigator.clipboard.writeText(email);
-
-                // Show the feedback pop-up
-                feedbackPopup.classList.remove("hidden");
-
-                // Hide the feedback pop-up after 2 seconds
-                setTimeout(() => {
-                    feedbackPopup.classList.add("hidden");
-                }, 2000);
-            });
-
-            // // Add click event listener to the feedback close button
-            // feedbackClose.addEventListener("click", () => {
-            //     // Hide the feedback pop-up when the close button is clicked
-            //     feedbackPopup.classList.add("hidden");
-            // });
-
-            let curIndex = 0;
-            const cards = document.querySelectorAll('#project-cards .card');
-            const totalCards = cards.length;
-            let visibleCards = 3;
-            let isSmallScreen = false;
-            function updateCardDisplay() {
-                cards.forEach((card, index) => {
-                    if (index >= curIndex && index < curIndex + visibleCards) {
-                        card.style.display = 'flex';
-                        if (!isSmallScreen) {
-                            card.classList.remove("fade-in")
-                            void card.offsetWidth;
-                            card.classList.add("fade-in")
-                        }
-                    }
-                    else {
-                        card.style.display = 'none';
-                    }
-                });
-            }
-
-            document.addEventListener('DOMContentLoaded', function () {
-                updateButtonVisibility();
-
-                document.getElementById('slide-project-right').addEventListener('click', function () {
-                    if (curIndex < totalCards - visibleCards) {
-                        curIndex++;
-                        updateCardDisplay();
-                        updateButtonVisibility();
-                    }
-                });
-
-                document.getElementById('slide-project-left').addEventListener('click', function () {
-                    if (curIndex > 0) {
-                        curIndex--;
-                        updateCardDisplay();
-                        updateButtonVisibility();
-                    }
-                });
-            });
-
-            function updateButtonVisibility() {
-                let leftButton = document.getElementById('slide-project-left');
-                let rightButton = document.getElementById('slide-project-right');
-
-                if (curIndex <= 0) {
-                    leftButton.style.display = 'none';
-                } else {
-                    leftButton.style.display = 'block';
-                }
-
-                if (curIndex >= totalCards - visibleCards) {
-                    rightButton.style.display = 'none';
-                } else {
-                    rightButton.style.display = 'block';
-                }
-            }
-
-            function adjustVisibleCards() {
-                isSmallScreen = window.matchMedia("(max-width: 639px)").matches;
-                if (isSmallScreen) {
-                    visibleCards = cards.length;
-                } else {
-                    visibleCards = 3;
-                }
-
-                updateCardDisplay();
-                updateButtonVisibility();
-            }
-
-            document.addEventListener('DOMContentLoaded', adjustVisibleCards);
-            window.addEventListener('resize', adjustVisibleCards);
-            updateCardDisplay();
-
-        </script>
-
+    <!-- Project Modals -->
+    <!-- Modal 1 - Cosmic Adventure -->
+    <div id="modal1" class="project-modal fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+        <div class="bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="relative">
+                <button onclick="closeModal('modal1')" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                <div class="h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Game Project" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8">
+                    <h2 class="text-3xl font-bold mb-4">Cosmic Adventure</h2>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">Unity</span>
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">C#</span>
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">Shader Graph</span>
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">Procedural Generation</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-indigo-300">Project Overview</h3>
+                    <p class="text-gray-300 mb-6">Cosmic Adventure is a space exploration game where players discover procedurally generated planets with unique ecosystems and weather patterns. The game features a dynamic day-night cycle, realistic atmospheric scattering, and emergent gameplay systems.</p>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-indigo-300">My Contributions</h3>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2 mb-6">
+                        <li>Developed the procedural planet generation system using noise algorithms and mesh deformation</li>
+                        <li>Created custom shaders for atmospheric scattering and weather effects</li>
+                        <li>Implemented the dynamic ecosystem simulation with predator-prey relationships</li>
+                        <li>Optimized rendering pipeline to maintain 60fps on mid-range hardware</li>
+                        <li>Designed the ship physics and control system</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-indigo-300">Technical Highlights</h3>
+                    <div class="bg-gray-700 rounded-lg p-4 mb-6">
+                        <code class="text-gray-200 text-sm">
+// Simplified planet generation snippet<br/>
+void GeneratePlanet() {<br/>
+&nbsp;&nbsp;for(int i = 0; i &lt; vertexCount; i++) {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Vector3 vertex = sphereVertices[i];<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;float elevation = CalculateNoise(vertex);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;vertex *= radius + elevation * heightMultiplier;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;vertices[i] = vertex;<br/>
+&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;ApplyBiomes(vertices);<br/>
+}
+                        </code>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <a href="#" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                                <i class="fas fa-play mr-2"></i> Watch Trailer
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                                <i class="fab fa-github mr-2"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</body>
+    
+    <!-- Modal 2 - Shadow Tactics -->
+    <div id="modal2" class="project-modal fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+        <div class="bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="relative">
+                <button onclick="closeModal('modal2')" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                <div class="h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1551103782-8ab0493f16a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Game Project" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8">
+                    <h2 class="text-3xl font-bold mb-4">Shadow Tactics</h2>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">Unreal Engine</span>
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">C++</span>
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">Blueprint</span>
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">AI</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-indigo-300">Project Overview</h3>
+                    <p class="text-gray-300 mb-6">Shadow Tactics is a stealth-based strategy game where players control a team of operatives with unique abilities to complete missions in enemy territory. The game features advanced AI behaviors, dynamic lighting for stealth mechanics, and complex level design.</p>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-indigo-300">My Contributions</h3>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2 mb-6">
+                        <li>Implemented the core AI perception system with vision cones and hearing mechanics</li>
+                        <li>Developed the behavior tree system for enemy AI with patrol routes and alert states</li>
+                        <li>Created the dynamic lighting system that affects stealth visibility</li>
+                        <li>Optimized the networking code for multiplayer synchronization</li>
+                        <li>Built tools for level designers to setup patrol paths and vision parameters</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-indigo-300">Technical Highlights</h3>
+                    <div class="bg-gray-700 rounded-lg p-4 mb-6">
+                        <code class="text-gray-200 text-sm">
+// AI Vision Detection<br/>
+bool AEnemyCharacter::CanSeePlayer() {<br/>
+&nbsp;&nbsp;FVector Start = GetEyeLocation();<br/>
+&nbsp;&nbsp;FVector End = Player->GetActorLocation();<br/>
+&nbsp;&nbsp;FHitResult HitResult;<br/>
+&nbsp;&nbsp;FCollisionQueryParams Params;<br/>
+&nbsp;&nbsp;Params.AddIgnoredActor(this);<br/>
+<br/>
+&nbsp;&nbsp;if (!GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECC_Visibility, Params)) {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;float Angle = FMath::RadiansToDegrees(FMath::Acos(FVector::DotProduct(GetActorForwardVector(), (End - Start).GetSafeNormal())));<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;return Angle &lt; VisionAngle;<br/>
+&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;return false;<br/>
+}
+                        </code>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <a href="#" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                                <i class="fas fa-play mr-2"></i> Watch Trailer
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                                <i class="fab fa-github mr-2"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 3 - Pixel Quest -->
+    <div id="modal3" class="project-modal fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+        <div class="bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="relative">
+                <button onclick="closeModal('modal3')" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                <div class="h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Game Project" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8">
+                    <h2 class="text-3xl font-bold mb-4">Pixel Quest</h2>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">Godot</span>
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">GDScript</span>
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">Pixel Art</span>
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">Custom Physics</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-indigo-300">Project Overview</h3>
+                    <p class="text-gray-300 mb-6">Pixel Quest is a retro-style RPG featuring hand-crafted pixel art and a custom physics engine. The game combines classic JRPG elements with modern gameplay mechanics, including a branching dialogue system, day-night cycles, and dynamic quests.</p>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-indigo-300">My Contributions</h3>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2 mb-6">
+                        <li>Developed the custom physics engine to support pixel-perfect collisions</li>
+                        <li>Created the dialogue system with branching narratives and character relationships</li>
+                        <li>Implemented the inventory and crafting systems</li>
+                        <li>Designed the animation system for character sprites</li>
+                        <li>Optimized the game for low-end hardware while maintaining visual quality</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-indigo-300">Technical Highlights</h3>
+                    <div class="bg-gray-700 rounded-lg p-4 mb-6">
+                        <code class="text-gray-200 text-sm">
+# Pixel-perfect collision in GDScript<br/>
+func _physics_process(delta):<br/>
+&nbsp;&nbsp;var collision = move_and_collide(velocity * delta)<br/>
+&nbsp;&nbsp;if collision:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;var tile_pos = world_to_map(position + collision.normal)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;if tile_map.get_cellv(tile_pos) != -1:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var pixel_offset = Vector2(fmod(position.x, tile_size.x), fmod(position.y, tile_size.y))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if pixel_offset.x &lt; collision_margin or pixel_offset.x &gt; tile_size.x - collision_margin:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;velocity.x = 0<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if pixel_offset.y &lt; collision_margin or pixel_offset.y &gt; tile_size.y - collision_margin:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;velocity.y = 0
+                        </code>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <a href="#" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                                <i class="fas fa-play mr-2"></i> Watch Trailer
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                                <i class="fab fa-github mr-2"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 4 - Procedural Terrain -->
+    <div id="modal4" class="project-modal fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+        <div class="bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="relative">
+                <button onclick="closeModal('modal4')" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                <div class="h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="R&D Project" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8">
+                    <h2 class="text-3xl font-bold mb-4">Procedural Terrain Generation</h2>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">HLSL</span>
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">Compute Shaders</span>
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">Noise Algorithms</span>
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">GPU Acceleration</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-indigo-300">Research Overview</h3>
+                    <p class="text-gray-300 mb-6">This research project explored GPU-accelerated terrain generation techniques using compute shaders and advanced noise algorithms. The system generates infinite, varied terrain with dynamic level of detail (LOD) and seamless biome transitions while maintaining high performance.</p>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-indigo-300">Key Findings</h3>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2 mb-6">
+                        <li>Developed a hybrid noise approach combining Perlin, Worley, and Domain Warping for natural formations</li>
+                        <li>Implemented GPU-based LOD system that adapts to camera distance and movement speed</li>
+                        <li>Created biome blending system using compute shaders for smooth transitions</li>
+                        <li>Achieved 10x performance improvement over CPU-based approaches</li>
+                        <li>Developed erosion simulation running entirely on GPU</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-indigo-300">Technical Implementation</h3>
+                    <div class="bg-gray-700 rounded-lg p-4 mb-6">
+                        <code class="text-gray-200 text-sm">
+// Compute shader for terrain generation<br/>
+[numthreads(8, 8, 1)]<br/>
+void GenerateTerrain (uint3 id : SV_DispatchThreadID) {<br/>
+&nbsp;&nbsp;float2 uv = id.xy * _ChunkSize / _Resolution;<br/>
+&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;// Base noise with domain warping<br/>
+&nbsp;&nbsp;float baseNoise = PerlinNoise(uv * _Frequency);<br/>
+&nbsp;&nbsp;float2 warpUV = uv + baseNoise * _WarpStrength;<br/>
+&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;// Combined noise layers<br/>
+&nbsp;&nbsp;float mountain = PerlinNoise(warpUV * 0.2) * 50;<br/>
+&nbsp;&nbsp;float detail = WorleyNoise(warpUV * 2.0) * 5;<br/>
+&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;// Biome blending<br/>
+&nbsp;&nbsp;float biome = Smoothstep(_BiomeThreshold, _BiomeThreshold + 0.1, PerlinNoise(uv * 0.05));<br/>
+&nbsp;&nbsp;float height = lerp(mountain, detail, biome);<br/>
+&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;_Heightmap[id.xy] = height;<br/>
+}
+                        </code>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <a href="#" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                                <i class="fas fa-file-pdf mr-2"></i> Read Paper
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                                <i class="fab fa-github mr-2"></i> View Implementation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 5 - Real-Time GI -->
+    <div id="modal5" class="project-modal fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+        <div class="bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="relative">
+                <button onclick="closeModal('modal5')" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                <div class="h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1639762681057-1e71aacd134c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="R&D Project" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8">
+                    <h2 class="text-3xl font-bold mb-4">Real-Time Global Illumination</h2>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">Vulkan</span>
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">Ray Tracing</span>
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">SDF</span>
+                        <span class="px-3 py-1 bg-indigo-900 text-indigo-200 rounded-full text-sm">Voxel Cone Tracing</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-indigo-300">Research Overview</h3>
+                    <p class="text-gray-300 mb-6">This project investigated alternative approaches to real-time global illumination without relying on hardware ray tracing. The solution combines signed distance fields (SDF) with voxel cone tracing to achieve plausible indirect lighting at a fraction of the computational cost.</p>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-indigo-300">Key Innovations</h3>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2 mb-6">
+                        <li>Developed hybrid SDF/voxel representation for dynamic scenes</li>
+                        <li>Implemented cone tracing with adaptive step size based on scene complexity</li>
+                        <li>Created temporal accumulation system to reduce noise and artifacts</li>
+                        <li>Achieved 60fps performance on mid-range GPUs</li>
+                        <li>Developed denoising techniques specifically for voxel-based GI</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-bold mb-3 text-indigo-300">Technical Implementation</h3>
+                    <div class="bg-gray-700 rounded-lg p-4 mb-6">
+                        <code class="text-gray-200 text-sm">
+// Voxel cone tracing for indirect diffuse<br/>
+vec3 ConeTraceDiffuse(vec3 origin, vec3 direction, float tanHalfAngle) {<br/>
+&nbsp;&nbsp;float maxDistance = _MaxTraceDistance;<br/>
+&nbsp;&nbsp;float minDistance = _VoxelSize * 2.0;<br/>
+&nbsp;&nbsp;float currentDistance = minDistance;<br/>
+&nbsp;&nbsp;vec3 accumLight = vec3(0.0);<br/>
+&nbsp;&nbsp;float accumWeight = 0.0;<br/>
+<br/>
+&nbsp;&nbsp;while(currentDistance &lt; maxDistance && accumWeight &lt; 1.0) {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;float coneDiameter = 2.0 * tanHalfAngle * currentDistance;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;float mipLevel = log2(coneDiameter / _VoxelSize);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;vec3 position = origin + direction * currentDistance;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;vec4 voxel = textureLod(_VoxelTexture, position, mipLevel);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;if(voxel.a &gt; 0.01) {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float weight = (1.0 - accumWeight) * voxel.a;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;accumLight += voxel.rgb * weight;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;accumWeight += weight;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;currentDistance += coneDiameter * _StepScale;<br/>
+&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;return accumLight / max(accumWeight, 0.001);<br/>
+}
+                        </code>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <a href="#" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                                <i class="fas fa-file-pdf mr-2"></i> Read Paper
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                                <i class="fab fa-github mr-2"></i> View Implementation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="script.js"></script>
+</body>
 </html>

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.project-modal {
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.project-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 24px;
+    height: 100%;
+    width: 2px;
+    background: #4f46e5;
+}
+
+.skill-bar {
+    transition: width 1.5s ease-in-out;
+}
+
+/* Toggle button styles */
+#toggleOldGames i {
+    transition: transform 0.3s ease;
+}
+
+#toggleOldGames.active i {
+    transform: rotate(180deg);
+}
+
+#oldGames {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: top;
+    transform: scaleY(0);
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 0;
+}
+
+@media (min-width: 768px) {
+    #oldGames {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    #oldGames {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+#oldGames.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: auto;
+}
+
+/* Add a subtle shadow to the toggle button */
+#toggleOldGames {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#toggleOldGames:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#toggleOldGames:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust spacing for the games section */
+#games {
+    padding-bottom: 2rem;
+}
+
+#games:has(#oldGames:not(.show)) {
+    padding-bottom: 0;
+} 
