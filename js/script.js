@@ -164,17 +164,22 @@ function createProjectModal(project) {
                             <code class="text-gray-200 text-sm whitespace-pre-wrap break-words">${project.details.codeSnippet}</code>
                         </div>
                         
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <a href="${project.itchioUrl || '#'}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
-                                    <i class="fab fa-itch-io mr-2"></i> View on itch.io
-                                </a>
-                            </div>
-                            <div>
-                                <a href="${project.githubUrl || '#'}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
-                                    <i class="fab fa-github mr-2"></i> View Code
-                                </a>
-                            </div>
+                        <div class="flex flex-wrap gap-4 justify-between items-center">
+                            ${project.showItchio && project.itchioUrl ? `
+                            <a href="${project.itchioUrl}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                                <i class="fab fa-itch-io mr-2"></i> View on itch.io
+                            </a>
+                            ` : ''}
+                            ${project.showTrailer && project.trailerUrl ? `
+                            <a href="${project.trailerUrl}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                                <i class="fas fa-play mr-2"></i> Watch Trailer
+                            </a>
+                            ` : ''}
+                            ${project.showGithub && project.githubUrl ? `
+                            <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                                <i class="fab fa-github mr-2"></i> View Code
+                            </a>
+                            ` : ''}
                         </div>
                     </div>
                 </div>
@@ -211,13 +216,22 @@ function createExpandedProjectCard(project) {
                         </div>
                         ` : ''}
                     </div>
-                    <div class="flex justify-between items-center mt-6">
-                        <a href="${project.itchioUrl || '#'}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                    <div class="flex flex-wrap gap-4 justify-between items-center mt-6">
+                        ${project.showItchio && project.itchioUrl ? `
+                        <a href="${project.itchioUrl}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
                             <i class="fab fa-itch-io mr-2"></i> View on itch.io
                         </a>
-                        <a href="${project.githubUrl || '#'}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                        ` : ''}
+                        ${project.showTrailer && project.trailerUrl ? `
+                        <a href="${project.trailerUrl}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
+                            <i class="fas fa-play mr-2"></i> Watch Trailer
+                        </a>
+                        ` : ''}
+                        ${project.showGithub && project.githubUrl ? `
+                        <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center">
                             <i class="fab fa-github mr-2"></i> View Code
                         </a>
+                        ` : ''}
                     </div>
                 </div>
             </div>

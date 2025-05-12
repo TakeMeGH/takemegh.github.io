@@ -10,6 +10,10 @@ const projects = {
             showTechnicalHighlights: false,
             itchioUrl: 'https://rmdtya.itch.io/couriers-conquest',
             githubUrl: 'https://github.com/TakeMeGH/couriers-conquest',
+            trailerUrl: 'https://www.youtube.com/watch?v=your-trailer-id',
+            showItchio: true,
+            showGithub: true,
+            showTrailer: true,
             details: {
                 overview: 'Take on the role of a courier in a vibrant world. Navigate challenges, optimize your route, and ensure timely deliveries.',
                 contributions: [
@@ -29,6 +33,10 @@ const projects = {
             showTechnicalHighlights: false,
             itchioUrl: 'https://samueltaniel.itch.io/full-stack-witchcraft',
             githubUrl: 'https://github.com/TakeMeGH/gimjam-2025',
+            trailerUrl: 'https://www.youtube.com/watch?v=your-trailer-id',
+            showItchio: true,
+            showGithub: true,
+            showTrailer: true,
             details: {
                 overview: 'Help Caca and Cici gather as many books as possible in a magical, chaotic environment. Play locally with a friend and experience the fun of too many books, too many hazards, and too much chaos!',
                 contributions: [
@@ -48,6 +56,10 @@ const projects = {
             showTechnicalHighlights: false,
             itchioUrl: 'https://navisraditya.itch.io/molly-palli-palli',
             githubUrl: 'https://github.com/TakeMeGH/the-cat',
+            trailerUrl: 'https://www.youtube.com/watch?v=your-trailer-id',
+            showItchio: true,
+            showGithub: true,
+            showTrailer: true,
             details: {
                 overview: 'Guide Molly the cat to safety by solving puzzles and using household items. Learn about fire safety in a fun, retro-inspired environment.',
                 contributions: [
@@ -69,6 +81,10 @@ const projects = {
             showTechnicalHighlights: false,
             itchioUrl: 'https://navisraditya.itch.io/the-knight-the-princess-and-the-last-threads',
             githubUrl: 'https://github.com/TakeMeGH/garena-game-jam-2',
+            trailerUrl: 'https://www.youtube.com/watch?v=your-trailer-id',
+            showItchio: true,
+            showGithub: true,
+            showTrailer: true,
             details: {
                 overview: 'Play as Hades and Lopi, defending the last threads of the universe from waves of enemies. Use simple two-button controls for intense local multiplayer action.',
                 contributions: [
@@ -88,6 +104,10 @@ const projects = {
             showTechnicalHighlights: false,
             itchioUrl: 'https://navisraditya.itch.io/trafficky',
             githubUrl: 'https://github.com/TakeMeGH/wijart-gemastik-2023',
+            trailerUrl: 'https://www.youtube.com/watch?v=your-trailer-id',
+            showItchio: true,
+            showGithub: true,
+            showTrailer: true,
             details: {
                 overview: 'Identify traffic violations and help Rara, the police officer, keep the roads safe. Designed for educational impact and fun!',
                 contributions: [
@@ -107,6 +127,10 @@ const projects = {
             showTechnicalHighlights: false,
             itchioUrl: 'https://takemegh.itch.io/galactic-dive',
             githubUrl: 'https://github.com/TakeMeGH/compfest-downwell',
+            trailerUrl: 'https://www.youtube.com/watch?v=your-trailer-id',
+            showItchio: true,
+            showGithub: true,
+            showTrailer: true,
             details: {
                 overview: 'Navigate through uncharted galaxies, battle alien creatures, and survive the mysteries of space with advanced, weaponized boots.',
                 contributions: [
@@ -120,86 +144,77 @@ const projects = {
     ],
     rnd: [
         {
-            id: 'modal4',
-            title: 'Procedural Terrain Generation',
-            image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-            tags: ['HLSL', 'Compute Shaders', 'Noise Algorithms'],
-            description: 'Research into GPU-accelerated terrain generation with dynamic LOD and biome blending.',
-            showTechnicalHighlights: true,
-            itchioUrl: '',
+            id: 'fps-3c',
+            title: 'FPS 3C and Shader Research',
+            image: 'https://images.unsplash.com/photo-1639762681057-1e71aacd134c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+            tags: ['Unreal Engine', 'Shader Development', 'PS5 Integration'],
+            description: 'Research into FPS character control, camera systems, and advanced shader effects with PS5 integration.',
+            githubUrl: 'https://github.com/TakeMeGH/fps-3c',
+            showGithub: true,
             details: {
-                overview: 'This research project explored GPU-accelerated terrain generation techniques using compute shaders and advanced noise algorithms. The system generates infinite, varied terrain with dynamic level of detail (LOD) and seamless biome transitions while maintaining high performance.',
+                overview: 'This project focused on developing advanced FPS character control and camera systems, along with various shader effects, while integrating with PS5-specific features.',
                 contributions: [
-                    'Developed a hybrid noise approach combining Perlin, Worley, and Domain Warping for natural formations',
-                    'Implemented GPU-based LOD system that adapts to camera distance and movement speed',
-                    'Created biome blending system using compute shaders for smooth transitions',
-                    'Achieved 10x performance improvement over CPU-based approaches',
-                    'Developed erosion simulation running entirely on GPU'
-                ],
-                codeSnippet: `// Compute shader for terrain generation
-[numthreads(8, 8, 1)]
-void GenerateTerrain (uint3 id : SV_DispatchThreadID) {
-    float2 uv = id.xy * _ChunkSize / _Resolution;
-    
-    // Base noise with domain warping
-    float baseNoise = PerlinNoise(uv * _Frequency);
-    float2 warpUV = uv + baseNoise * _WarpStrength;
-    
-    // Combined noise layers
-    float mountain = PerlinNoise(warpUV * 0.2) * 50;
-    float detail = WorleyNoise(warpUV * 2.0) * 5;
-    
-    // Biome blending
-    float biome = Smoothstep(_BiomeThreshold, _BiomeThreshold + 0.1, PerlinNoise(uv * 0.05));
-    float height = lerp(mountain, detail, biome);
-    
-    _Heightmap[id.xy] = height;
-}`
+                    'Created dissolve shader for character effects',
+                    'Created a dynamic health damage UI shader inspired by Call of Duty, with screen effects',
+                    'Implemented invisibility and energy shield shaders',
+                    'Successfully integrated PS5-specific features including haptic feedback, adaptive triggers, controller speaker support, and trophy system',
+                    'Using Unreal Engine sequencer for creating cinematic sequences and gameplay moments',
+                    'Implemented basic save system functionality',
+                    'Learned and implemented Unreal Engine lighting system for dynamic environments'
+                ]
             }
         },
         {
-            id: 'modal5',
-            title: 'Real-Time Global Illumination',
+            id: 'gameplay-ability',
+            title: 'Gameplay Ability System Research',
             image: 'https://images.unsplash.com/photo-1639762681057-1e71aacd134c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-            tags: ['Vulkan', 'Ray Tracing', 'SDF'],
-            description: 'Exploring techniques for dynamic lighting with signed distance fields and voxel cone tracing.',
-            showTechnicalHighlights: true,
-            itchioUrl: '',
+            tags: ['Unreal Engine', 'GAS', 'Multiplayer'],
+            description: 'Research into implementing a comprehensive gameplay ability system for MOBA-style games with multiplayer support.',
+            githubUrl: 'https://github.com/TakeMeGH/gameplay-ability',
+            showGithub: true,
             details: {
-                overview: 'This project investigated alternative approaches to real-time global illumination without relying on hardware ray tracing. The solution combines signed distance fields (SDF) with voxel cone tracing to achieve plausible indirect lighting at a fraction of the computational cost.',
+                overview: 'This project explored the implementation of a comprehensive gameplay ability system for MOBA-style games, including level progression, skill points, and multiplayer support.',
                 contributions: [
-                    'Developed hybrid SDF/voxel representation for dynamic scenes',
-                    'Implemented cone tracing with adaptive step size based on scene complexity',
-                    'Created temporal accumulation system to reduce noise and artifacts',
-                    'Achieved 60fps performance on mid-range GPUs',
-                    'Developed denoising techniques specifically for voxel-based GI'
-                ],
-                codeSnippet: `// Voxel cone tracing for indirect diffuse
-vec3 ConeTraceDiffuse(vec3 origin, vec3 direction, float tanHalfAngle) {
-    float maxDistance = _MaxTraceDistance;
-    float minDistance = _VoxelSize * 2.0;
-    float currentDistance = minDistance;
-    vec3 accumLight = vec3(0.0);
-    float accumWeight = 0.0;
-
-    while(currentDistance < maxDistance && accumWeight < 1.0) {
-        float coneDiameter = 2.0 * tanHalfAngle * currentDistance;
-        float mipLevel = log2(coneDiameter / _VoxelSize);
-        
-        vec3 position = origin + direction * currentDistance;
-        vec4 voxel = textureLod(_VoxelTexture, position, mipLevel);
-        
-        if(voxel.a > 0.01) {
-            float weight = (1.0 - accumWeight) * voxel.a;
-            accumLight += voxel.rgb * weight;
-            accumWeight += weight;
-        }
-        
-        currentDistance += coneDiameter * _StepScale;
-    }
-    
-    return accumLight / max(accumWeight, 0.001);
-}`
+                    'Designed and implemented a flexible level progression system with experience points and level-up mechanics',
+                    'Implemented active and passive skills with customizable effects and conditions',
+                    'Maintained multiplayer replication to ensure consistent gameplay across all clients',
+                    'Built an UI system for skill management and progression visualization',
+                    'Created a data-driven approach for easy skill creation and balancing'
+                ]
+            }
+        },
+        {
+            id: 'pcg-outdoor',
+            title: 'Procedural Content Generation for Outdoor Environments',
+            image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+            tags: ['Unreal Engine', 'PCG', 'Spline Integration'],
+            description: 'Research into procedural generation of outdoor environments with dynamic path creation using splines.',
+            githubUrl: 'https://github.com/TakeMeGH/pcg-outdoor',
+            showGithub: true,
+            details: {
+                overview: 'This research project focused on developing a procedural content generation system for outdoor environments that dynamically places vegetation and terrain features while integrating with spline-based path creation.',
+                contributions: [
+                    'Designed and implemented a procedural placement system for natural elements (grass, trees, rocks) with density control and natural distribution patterns',
+                    'Created a spline-based path generation system that automatically creates walkable paths through the environment',
+                    'Developed a procedural building generation system with customizable parameters for floors, rooms, and doors'
+                ]
+            }
+        },
+        {
+            id: 'auto-material',
+            title: 'Automatic Material Generation for Terrain',
+            image: 'https://images.unsplash.com/photo-1639762681057-1e71aacd134c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+            tags: ['Unreal Engine', 'Material System', 'Height-based Blending'],
+            description: 'Research into automatic material generation based on terrain height and features.',
+            githubUrl: 'https://github.com/TakeMeGH/auto-material',
+            showGithub: true,
+            details: {
+                overview: 'This project explored automatic material generation for terrain based on height and features, creating dynamic material transitions and special features like puddles.',
+                contributions: [
+                    'Developed a sophisticated height-based material blending system that creates natural transitions between different terrain types',
+                    'Created an automatic puddle generation system that identifies and fills low areas with realistic water effects',
+                    'Implemented a material variation system that adds natural diversity to terrain surfaces'
+                ]
             }
         }
     ]
