@@ -1,470 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Abdul Rafi</title>
-    <link rel="icon" type="image/x-icon" href="static/image/favicon.ico" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="Description" lang="en" content="open source html and css template" />
-    <meta name="author" content="mlp design" />
-    <meta name="robots" content="index, follow" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="static/style.css" />
-    <style></style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="icon" type="image/x-icon" href="static/image/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
-
-<body class="font-sans">
-    <div class="container mx-auto px-4">
-        <section class="py-8 text-center fade-in" style="margin-bottom: 0px">
-            <h1 class="text-4xl font-bold mb-2">Abdul Rafi</h1>
-
-            <div class="mt-4">
-                <div class="centered-list">
-                    <img class="profile-image" src="static/image/2106630113_FotoDiri.jpg" alt="Profile Image" />
-                    <div class="flex flex-col ml-4">
-                        <div class="flex items-center">
-                            <div class="feedback-email">
-                                <img src="static/image/gmail.png" style="width: 50px; height: 50px" />
-                                <p class="ml-2" id="email">
-                                    abdulrafi907@gmail.com
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="social-icons">
-                        <a class="text-blue-500 hover:text-blue-300" href="https://github.com/TakeMeGH">
-                            <img src="static/image/github (2).png" alt="github" />
-                        </a>
-                        <a class="text-blue-500 hover:text-blue-300" href="https://www.linkedin.com/in/abdul-rafi/">
-                            <img src="static/image/linkedin (2).png" alt="LinkedIn" />
-                        </a>
-                        <a class="text-blue-500 hover:text-blue-300" href="https://www.instagram.com/abdul_rafiii/">
-                            <img src="static/image/instagram (2).png" alt="instagram" />
-                        </a>
-                        <a class="text-blue-500 hover:text-blue-300" href="https://takemegh.itch.io/">
-                            <img src="static/image/itchio.png" alt="itch.io" />
-                        </a>
+<body class="text-gray-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-900 bg-opacity-90 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-indigo-400">Abdul Rafi</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-indigo-700 transition">Home</a>
+                        <a href="#games" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-indigo-700 transition">Games</a>
+                        <a href="#rnd" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-indigo-700 transition">R&D</a>
+                        <a href="#experience" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-indigo-700 transition">Experience</a>
+                        <a href="#education" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-indigo-700 transition">Education</a>
+                        <a href="#awards" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-indigo-700 transition">Awards</a>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="py-8 text-center fade-in" style="margin-bottom: 0px">
-            <p class="text-center-lg">
-                I am a enthusiastic programmer who finds immense joy in the
-                fusion of coding and algorithms within the realm of game
-                development, where I can bring my creative ideas to life
-                through immersive gameplay experiences. As a competitive
-                programmer, I thrive on the challenges presented by
-                intricate algorithms, constantly seeking innovative
-                solutions and honing my skills to excel in competitive
-                coding competitions.
-            </p>
-            <h1 class="py-8 text-3xl">CV</h1>
-            <a class="card-button hover:bg-blue-700"
-                href="https://docs.google.com/document/d/1z0XRGCpPVwsF2rmpqs1HYQ_MY2OlKKxf/edit?usp=sharing&ouid=105857952239014899947&rtpof=true&sd=true">Open
-                My Latest CV</a>
-        </section>
-        <section class="py-8 text-center fade-in relative">
-            <h1 class="text-4xl font-bold mb-2">Projects Second Year</h1>
-            <div id="project-second-year-cards" class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 relative"></div>
-        </section>
-
-        <section class="py-8 text-center fade-in relative">
-            <h1 class="text-4xl font-bold mb-2">Projects First Year</h1>
-            <div id="project-first-year-cards" class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 relative"></div>
-        </section>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const projectsFirstYear = [
-                    {
-                        imageSrc: "static/image/Rocateer.png",
-                        altText: "Project 1",
-                        title: "Rocateer",
-                        gameEngine: "Game Engine : Godot",
-                        description: `A game developed by "menggeming" team for Garena Game Jam 2023. Players gather gold to construct
-                        a rocketship, dealing with a decreasing hunger level that imposes a time constraint on their
-                        journey.
-                        Players leverage their demise as a strategic feature, using death to upgrade and enhance their
-                        perks in this unique gaming experience.`,
-                        linkUrl: "https://navisraditya.itch.io/rocateer"
-                    },
-                    {
-                        imageSrc: "static/image/compfest-downwell.png",
-                        altText: "Project 2",
-                        title: "Galactic Dive",
-                        gameEngine: "Game Engine : Unity",
-                        description: `Galactic Dive is a project being developed for the
-                        Compfest 2023 website. This game is an endless game.
-                        In this game, the player must earn as many points as
-                        possible by killing enemies, falling deeper, and
-                        surviving as long as possible.`,
-                        linkUrl: "https://takemegh.itch.io/galactic-dive"
-                    },
-                    {
-                        imageSrc: "static/image/Traficky.png",
-                        altText: "Project 3",
-                        title: "Trafficky",
-                        gameEngine: "Game Engine : Unity",
-                        description: `Trafficky is a game designed for the Game
-                        Application Development contest during the GEMASTIK
-                        XVI event series. It's centered on imparting Traffic
-                        Education and Ethics to kids. In Trafficky, players
-                        join forces with Rara, a policewoman, and get to
-                        feel the excitement of overseeing traffic!`,
-                        linkUrl: "https://navisraditya.itch.io/trafficky"
-                    },
-                    // {
-                    //     imageSrc: "static/image/1945.jpg",
-                    //     altText: "Project 4",
-                    //     title: "The 1945",
-                    //     gameEngine: "Game Engine : Unity",
-                    //     description: `The 1945" is a game project created specifically
-                    // for the Joints Game Jam 2023. This game is a
-                    // top-down shooter, but it incorporates unique twists
-                    // and additional features to enhance the gameplay
-                    // experience.`
-                    //     linkUrl: "https://navisraditya.itch.io/the-1945-by-booleh"
-                    // }
-                ];
-
-                const projectsSecondYear = [
-                    {
-                        imageSrc: "static/image/CourierConquest.jpg",
-                        altText: "Project 1",
-                        title: "Couriers Conquest",
-                        gameEngine: "Game Engine : Unity",
-                        description: "Courier Conquest, developed during my Independent Study program at Agate, is a Genshin Impact-inspired RPG. Players take on the role of a delivery person in the magical world of Eldoria, a realm where ancient magic and modern technology coexist.",
-                        linkUrl: "https://rmdtya.itch.io/couriers-conquest"
-                    },
-                    {
-                        imageSrc: "static/image/Moly.png",
-                        altText: "Project 2",
-                        title: "Molly, Palli-Palli",
-                        gameEngine: "Game Engine : Unity",
-                        description: "Developed for GameJam+, Moly, Palli-Palli is a unique 2D platformer set in a 3D world, inspired by real-life lessons on Occupational Health and Safety. Players navigate as Molly, a resilient character surviving a house fire, while learning critical survival tips such as wetting a towel for breathing, seeking help through alarms, and escaping danger. ",
-                        linkUrl: "https://navisraditya.itch.io/molly-palli-palli"
-                    },
-                ];
-
-                function renderCards(elementId, projects) {
-                    const projectCardsContainer = document.getElementById(elementId);
-                    projectCardsContainer.innerHTML = '';
-                    projectCardsContainer.classList.add('grid-center');
-
-                    projects.forEach((project) => {
-                        const card = `
-                                <div class="card">
-                                    <img class="card-image" src="${project.imageSrc}" alt="${project.altText}" />
-                                    <h2 class="card-title">${project.title}</h2>
-                                    <h2 class="card-game-engine-desc">${project.gameEngine}</h2>
-                                    <p class="card-description">${project.description}</p>
-                                    <a class="card-button hover:bg-blue-700" href="${project.linkUrl}">More Details</a>
-                                </div>
-                            `;
-                        projectCardsContainer.insertAdjacentHTML('beforeend', card);
-                    });
-                }
-                renderCards("project-second-year-cards", projectsSecondYear);
-                renderCards("project-first-year-cards", projectsFirstYear);
-                updateButtonState();
-            });
-        </script>
-
-        <section class="py-8 text-center fade-in" id="work-experience-section">
-            <h1 class="text-4xl font-bold mb-2">Work Experience</h1>
-            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4" id="work-experience-cards"></div>
-        </section>
-
-        <section class="py-8 text-center fade-in" id="award-section">
-            <h1 class="text-4xl font-bold mb-2">Award</h1>
-            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" id="award-cards"></div>
-        </section>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const workExperiences = [
-                    {
-                        imageSrc: "static/image/kc.jpeg",
-                        altText: "Kokocoder Group",
-                        title: "Kokocoder - Coding Coach",
-                        description: "As a part-time coding coach at Kokocoder since 2021, and I am currently continuing in this role. The role focuses on teaching students to prepare for the OSN (Olympiad for Informatics). The role involves assisting them in improving their coding skills and guiding them in their journey to excel in the competition."
-                    },
-                    {
-                        imageSrc: "static/image/ikadev-logo.jpeg",
-                        altText: "Ikadev",
-                        title: "Ikadev - Game Programmer",
-                        description: "As a Godot game programmer intern for Sunny Side Crossing Project at Ikadev Studio."
-                    },
-                    {
-                        imageSrc: "static/image/Agate.jpg",
-                        altText: "Agate",
-                        title: "Agate - Supporting Tech Engineer",
-                        description: "As a Supporting Tech Engineer intern in the Porting Division at Agate, I worked extensively with Unreal Engine, focusing on mastering advanced features such as lighting systems, materials, and the Gameplay Ability System (GAS). I also worked on porting game features, including adapting specific PlayStation 5 functionalities within Unreal Engine."
-                    }
-                ];
-
-                const awards = [
-                    {
-                        imageSrc: "static/image/icpc.png",
-                        altText: "ICPC 2022",
-                        title: "The 2022 ICPC Asia Jakarta Regional Contest - Gold Medalist",
-                        description: "The ICPC Jakarta competition takes place in Jakarta and focuses on competitive programming. It is an event where participants showcase their programming skills and compete against each other in a challenging environment."
-                    },
-                    {
-                        imageSrc: "static/image/ksn.png",
-                        altText: "KSN 2020",
-                        title: "KSN Informatika 2020 - Silver Medalist",
-                        description: "KSN Informatika (Kompetisi Sains Nasional Informatika) is a National Science Competition in Informatics in Indonesia. Participants are typically high school students competing at regional, national, and international levels."
-                    },
-                    {
-                        imageSrc: "static/image/logo-gemastik.png",
-                        altText: "Gemastik 2022",
-                        title: "Gemastik 2022 cabang Pemprograman - First Place",
-                        description: "Gemastik programming contest is organized by Puspresnas and revolves around competitive programming. It serves as a platform to evaluate participants' skills in this field and offer them a challenging environment to showcase their talents."
-                    }
-                ];
-
-                const workExperienceContainer = document.getElementById('work-experience-cards');
-                const awardContainer = document.getElementById('award-cards');
-
-                function renderCards(container, data) {
-                    data.forEach(item => {
-                        const card = `
-                        <div class="card">
-                            <img class="card-image" src="${item.imageSrc}" alt="${item.altText}" />
-                            <h2 class="card-title">${item.title}</h2>
-                            <p class="card-description">${item.description}</p>
-                        </div>
-                    `;
-                        container.insertAdjacentHTML('beforeend', card);
-                    });
-                }
-
-                renderCards(workExperienceContainer, workExperiences);
-                renderCards(awardContainer, awards);
-            });
-        </script>
-        <!-- ganti grid cols kalo mau tambah -->
-        <section class="py-8 text-center fade-in" style="margin-bottom: 15px">
-            <h1 class="text-4xl font-bold mb-2">Education</h1>
-            <div class="mt-4 grid grid-cols-1 gap-4">
-                <div class="card">
-                    <img class="card-image" src="static/image/ui.png" alt="Universitas Indonesia" />
-                    <h2 class="card-title">
-                        Universitas Indonesia - Computer Science
-                    </h2>
-                    <p class="card-description">
-                        Currently undergoing a bachelor degree in Computer
-                        Science at Universitas Indonesia.
-                    </p>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
-        </section>
-
-        <!-- Modal Templates -->
-        <div id="modal1" class="modal">
-            <div class="modal-content" style="max-width: 960px">
-                <span class="modal-close">&times;</span>
-                <h2 class="modal-title">The 1945</h2>
-                <p class="modal-description">
-                    "The 1945" is a 2D top-down shooter game that I
-                    developed during a one-week game jam. The game's
-                    mechanics revolve around the player's gun, which has the
-                    ability to kill other players who have the same color as
-                    the gun.The main focus of the game is to provide players
-                    with a chaotic experience where they must dodge enemy
-                    attacks, eliminate enemies, and quickly adjust the color
-                    of their gun. This creates a challenging gameplay
-                    situation that requires quick reflexes and precise
-                    aiming.
-                </p>
-                <iframe width="100%" height="540" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-indigo-700">Home</a>
+                <a href="#games" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-indigo-700">Games</a>
+                <a href="#rnd" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-indigo-700">R&D</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-indigo-700">Experience</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-indigo-700">Education</a>
+                <a href="#awards" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-indigo-700">Awards</a>
             </div>
         </div>
-        <div id="modal2" class="modal">
-            <div class="modal-content" style="max-width: 960px; max-height: 540px">
-                <span class="modal-close">&times;</span>
-                <h2 class="modal-title">Project 2</h2>
-                <p class="modal-description">
-                    Detailed description of Project 2
-                </p>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span id="profile-name" class="text-indigo-400">Abdul Rafi</span></h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-indigo-300">Game Developer</h2>
+                <p id="profile-description" class="text-lg text-gray-300 mb-8">Passionate about creating immersive gaming experiences and pushing the boundaries of real-time graphics technology.</p>
+                <div class="flex items-center space-x-3 mb-8">
+                    <span id="profile-email" class="text-gray-100 text-lg font-medium">abdulrafi907@gmail.com</span>
+                    <button onclick="copyEmail()" class="ml-2 text-gray-400 hover:text-indigo-400 transition" title="Copy email">
+                        <i class="far fa-copy text-lg"></i>
+                    </button>
+                </div>
+                <div id="profile-social" class="flex space-x-6 mb-8">
+                    <!-- Social links will be rendered here -->
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#games" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">View My Work</a>
+                    <a href="https://docs.google.com/document/d/1z0XRGCpPVwsF2rmpqs1HYQ_MY2OlKKxf/edit?usp=sharing&ouid=105857952239014899947&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="px-6 py-3 border border-indigo-400 text-indigo-400 rounded-lg hover:bg-indigo-900 transition animate-bounce">
+                        <i class="fas fa-file-alt mr-2"></i>View CV
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-500">
+                    <img src="static/image/2106630113_FotoDiri.jpg" alt="Profile" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Game Projects</h2>
+            <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
+        </div>
+        
+        <!-- Featured Games -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-bold mb-8 text-indigo-300">Featured Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projects will be dynamically inserted here -->
             </div>
         </div>
 
-        <!-- Feedback Pop-up -->
-        <div id="feedback-popup" class="feedback-popup hidden">
-            <div class="feedback-content">
-                <p class="feedback-description">
-                    Email copied to clipboard!
-                </p>
+        <!-- Old Games -->
+        <div>
+            <div class="flex justify-between items-center mb-8">
+                <h3 class="text-2xl font-bold text-indigo-300">Previous Projects</h3>
+                <button id="toggleOldGames" class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center slow-pulse">
+                    <span>Show Previous Projects</span>
+                    <i class="fas fa-chevron-down ml-2 transition-transform"></i>
+                </button>
+            </div>
+            <div id="oldGames" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 hidden">
+                <!-- Previous projects will be dynamically inserted here -->
             </div>
         </div>
+    </section>
 
-        <script>
-            // Get all modal elements
-            const modals = document.querySelectorAll(".modal");
+    <!-- R&D Section -->
+    <section id="rnd" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-800 bg-opacity-50 rounded-xl">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Research & Development</h2>
+            <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- R&D projects will be dynamically inserted here -->
+        </div>
+    </section>
 
-            // Get all modal open buttons
-            const modalOpenButtons =
-                document.querySelectorAll("[data-modal-id]");
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Work Experience</h2>
+            <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
+        </div>
+        <div class="relative" id="experience-timeline"></div>
+    </section>
 
-            // Get all modal close buttons
-            const modalCloseButtons =
-                document.querySelectorAll(".modal-close");
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-800 bg-opacity-50 rounded-xl">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Education</h2>
+            <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
+        </div>
+        <div id="education-list"></div>
+    </section>
 
-            // Function to open modal
-            const openModal = (modalId) => {
-                const modal = document.getElementById(modalId);
-                modal.style.display = "flex";
+    <!-- Awards Section -->
+    <section id="awards" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Awards & Achievements</h2>
+            <div class="w-20 h-1 bg-indigo-500 mx-auto"></div>
+        </div>
+        <div id="awards-list" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+    </section>
 
-                // Disable scrolling on the body
-                document.body.style.overflow = "hidden";
-            };
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">© 2024 Game Developer Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
 
-            // Function to close modal
-            const closeModal = (modal) => {
-                modal.style.display = "none";
-
-                // Enable scrolling on the body
-                document.body.style.overflow = "auto";
-            };
-
-            // Add event listener to modal open buttons
-            modalOpenButtons.forEach((button) => {
-                button.addEventListener("click", (event) => {
-                    event.preventDefault(); // Prevent the default anchor click behavior
-                    const modalId = button.getAttribute("data-modal-id");
-                    openModal(modalId);
-                });
-            });
-            // Add event listener to modal close buttons
-            modalCloseButtons.forEach((button) => {
-                button.addEventListener("click", () => {
-                    const modal = button.parentElement.parentElement;
-                    closeModal(modal);
-                });
-            });
-
-            // Add event listener to close modal on outside click
-            modals.forEach((modal) => {
-                modal.addEventListener("click", (event) => {
-                    if (event.target === modal) {
-                        closeModal(modal);
-                    }
-                });
-            });
-
-            // Get the email element
-            const emailElement = document.getElementById("email");
-
-            // Get the feedback pop-up elements
-            const feedbackPopup = document.getElementById("feedback-popup");
-            // const feedbackClose = document.querySelector(".feedback-close");
-
-            // Add click event listener to the email element
-            emailElement.addEventListener("click", () => {
-                // Copy the email text to the clipboard
-                const email = emailElement.innerText;
-                navigator.clipboard.writeText(email);
-
-                // Show the feedback pop-up
-                feedbackPopup.classList.remove("hidden");
-
-                // Hide the feedback pop-up after 2 seconds
-                setTimeout(() => {
-                    feedbackPopup.classList.add("hidden");
-                }, 2000);
-            });
-
-            // // Add click event listener to the feedback close button
-            // feedbackClose.addEventListener("click", () => {
-            //     // Hide the feedback pop-up when the close button is clicked
-            //     feedbackPopup.classList.add("hidden");
-            // });
-
-            let curIndex = 0;
-            const cards = document.querySelectorAll('#project-cards .card');
-            const totalCards = cards.length;
-            let visibleCards = 3;
-            let isSmallScreen = false;
-            function updateCardDisplay() {
-                cards.forEach((card, index) => {
-                    if (index >= curIndex && index < curIndex + visibleCards) {
-                        card.style.display = 'flex';
-                        if (!isSmallScreen) {
-                            card.classList.remove("fade-in")
-                            void card.offsetWidth;
-                            card.classList.add("fade-in")
-                        }
-                    }
-                    else {
-                        card.style.display = 'none';
-                    }
-                });
-            }
-
-            document.addEventListener('DOMContentLoaded', function () {
-                updateButtonVisibility();
-
-                document.getElementById('slide-project-right').addEventListener('click', function () {
-                    if (curIndex < totalCards - visibleCards) {
-                        curIndex++;
-                        updateCardDisplay();
-                        updateButtonVisibility();
-                    }
-                });
-
-                document.getElementById('slide-project-left').addEventListener('click', function () {
-                    if (curIndex > 0) {
-                        curIndex--;
-                        updateCardDisplay();
-                        updateButtonVisibility();
-                    }
-                });
-            });
-
-            function updateButtonVisibility() {
-                let leftButton = document.getElementById('slide-project-left');
-                let rightButton = document.getElementById('slide-project-right');
-
-                if (curIndex <= 0) {
-                    leftButton.style.display = 'none';
-                } else {
-                    leftButton.style.display = 'block';
-                }
-
-                if (curIndex >= totalCards - visibleCards) {
-                    rightButton.style.display = 'none';
-                } else {
-                    rightButton.style.display = 'block';
-                }
-            }
-
-            function adjustVisibleCards() {
-                isSmallScreen = window.matchMedia("(max-width: 639px)").matches;
-                if (isSmallScreen) {
-                    visibleCards = cards.length;
-                } else {
-                    visibleCards = 3;
-                }
-
-                updateCardDisplay();
-                updateButtonVisibility();
-            }
-
-            document.addEventListener('DOMContentLoaded', adjustVisibleCards);
-            window.addEventListener('resize', adjustVisibleCards);
-            updateCardDisplay();
-
-        </script>
-
-    </div>
+    <script src="js/projects.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/experience.js"></script>
+    <script src="js/education.js"></script>
+    <script src="js/awards.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/script.js"></script>
 </body>
-
 </html>
