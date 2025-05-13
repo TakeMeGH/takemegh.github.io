@@ -146,11 +146,13 @@ const projects = {
         {
             id: 'fps-3c',
             title: 'FPS 3C and Shader Research',
-            image: 'https://images.unsplash.com/photo-1639762681057-1e71aacd134c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+            image: 'static/image/rnd/FPS3C.png',
             tags: ['Unreal Engine', 'Shader Development', 'PS5 Integration'],
             description: 'Research into FPS character control, camera systems, and advanced shader effects with PS5 integration.',
-            githubUrl: 'https://github.com/TakeMeGH/fps-3c',
-            showGithub: true,
+            itchioUrl: 'https://takemegh.itch.io/fps-3c',
+            trailerUrl: 'https://youtu.be/to3GocxHeRg',
+            showItchio: true,
+            showTrailer: true,
             details: {
                 overview: 'This project focused on developing advanced FPS character control and camera systems, along with various shader effects, while integrating with PS5-specific features.',
                 contributions: [
@@ -186,11 +188,14 @@ const projects = {
         {
             id: 'pcg-outdoor',
             title: 'Procedural Content Generation for Outdoor Environments',
-            image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+            image: 'static/image/rnd/PCG.png',
             tags: ['Unreal Engine', 'PCG', 'Spline Integration'],
             description: 'Research into procedural generation of outdoor environments with dynamic path creation using splines.',
-            githubUrl: 'https://github.com/TakeMeGH/pcg-outdoor',
-            showGithub: true,
+            description: 'Research into FPS character control, camera systems, and advanced shader effects with PS5 integration.',
+            itchioUrl: 'https://takemegh.itch.io/pcg-rnd',
+            trailerUrl: 'https://youtu.be/5UySA7dBjek',
+            showItchio: true,
+            showTrailer: true,
             details: {
                 overview: 'This research project focused on developing a procedural content generation system for outdoor environments that dynamically places vegetation and terrain features while integrating with spline-based path creation.',
                 contributions: [
@@ -203,11 +208,13 @@ const projects = {
         {
             id: 'auto-material',
             title: 'Automatic Material Generation for Terrain',
-            image: 'https://images.unsplash.com/photo-1639762681057-1e71aacd134c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+            image: 'static/image/rnd/AutoMaterial.png',
             tags: ['Unreal Engine', 'Material System', 'Height-based Blending'],
             description: 'Research into automatic material generation based on terrain height and features.',
-            githubUrl: 'https://github.com/TakeMeGH/auto-material',
-            showGithub: true,
+            itchioUrl: 'https://takemegh.itch.io/auto-material-rnd',
+            trailerUrl: 'https://youtu.be/xeO1-MRrzd4',
+            showItchio: true,
+            showTrailer: true,
             details: {
                 overview: 'This project explored automatic material generation for terrain based on height and features, creating dynamic material transitions and special features like puddles.',
                 contributions: [
