@@ -27,20 +27,20 @@ const workExperience = [
       "Ported PlayStation 5 features",
     ]
   },
-  {
-    role: "Lead Programmer",
-    company: "Agate Game Course",
-    location: "Jakarta, Indonesia",
-    start: "Feb 2024",
-    end: "Jun 2024",
-    description: "Led programming for Agate Studi Independen Pengembang Game Batch 6.",
-    achievements: [
-      "Led programming team for game development course",
-      "Mentored students in game development",
-      "Coordinated with other instructors and staff",
-      "Developed curriculum and technical materials"
-    ]
-  },
+  // {
+  //   role: "Lead Programmer",
+  //   company: "Agate Game Course",
+  //   location: "Jakarta, Indonesia",
+  //   start: "Feb 2024",
+  //   end: "Jun 2024",
+  //   description: "Led programming for Agate Studi Independen Pengembang Game Batch 6.",
+  //   achievements: [
+  //     "Led programming team for game development course",
+  //     "Mentored students in game development",
+  //     "Coordinated with other instructors and staff",
+  //     "Developed curriculum and technical materials"
+  //   ]
+  // },
   {
     role: "Game Programmer Intern",
     company: "Ikadev",
