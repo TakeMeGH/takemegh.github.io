@@ -5,69 +5,71 @@ const projects = {
             id: 'couriers-conquest',
             title: 'Courier\'s Conquest',
             image: 'static/image/games/CourierConquest.jpg',
-            tags: ['Unity', 'Adventure', 'Delivery'],
-            description: 'Embark on a delivery adventure in a whimsical world. Overcome obstacles and deliver packages on time!',
+            tags: ['Unity', 'Adventure', 'Delivery', 'RPG', 'Team Lead'],
+            description: 'Embark on a delivery adventure in a whimsical world. Overcome obstacles and deliver packages on time! As the lead programmer, I managed a team of 6 programmers while implementing core gameplay systems.',
             showTechnicalHighlights: false,
             itchioUrl: 'https://rmdtya.itch.io/couriers-conquest',
             githubUrl: 'https://github.com/TakeMeGH/couriers-conquest',
-            trailerUrl: 'https://www.youtube.com/watch?v=your-trailer-id',
+            trailerUrl: 'https://youtu.be/SonHyGXENF4?si=zIGkq279Rpc-raf_',
             showItchio: true,
             showGithub: true,
             showTrailer: true,
             details: {
-                overview: 'Take on the role of a courier in a vibrant world. Navigate challenges, optimize your route, and ensure timely deliveries.',
+                overview: 'Take on the role of a courier in a vibrant world. Navigate challenges, optimize your route, and ensure timely deliveries. This RPG adventure features a comprehensive movement system, quest system, and interactive dialogue.',
                 contributions: [
-                    'Developed delivery and obstacle systems',
-                    'Implemented time and scoring mechanics',
-                    'Worked on world-building and character design'
-                ],
-                codeSnippet: `// Example delivery logic\nvoid DeliverPackage() {\n    if (atDestination) {\n        score += deliveryPoints;\n        packagesDelivered++;\n    }\n}`
+                    'Lead Programmer: Managed and coordinated a team of 6 programmers',
+                    'Developed core movement system including advanced climbing mechanics',
+                    'Implemented comprehensive quest system with another programmer',
+                    'Created and managed the dialogue system for character interactions',
+                    'Designed and implemented HUD and UI systems for game feedback',
+                    'Developed interactive minimap system for navigation',
+                    'Coordinated team efforts and maintained code quality standards'
+                ]
             }
         },
         {
             id: 'witchcraft',
             title: 'FullStack WitchCraft',
             image: 'static/image/games/FullStackWitchCraft.gif',
-            tags: ['Unity', '3D', 'GameJam'],
-            description: 'A chaotic local co-op game where two witches compete to collect the most books in a magical laboratory. Nominated for Best Visual and Best Gameplay GIM ITB GameJam 2025!',
+            tags: ['Unreal Engine', '3D', 'GameJam', 'Local Multiplayer', 'Physics'],
+            description: 'My first Unreal Engine game jam project! A chaotic local co-op game where two witches compete to collect the most books in a magical laboratory. Nominated for Best Visual and Best Gameplay GIM ITB GameJam 2025!',
             showTechnicalHighlights: false,
             itchioUrl: 'https://samueltaniel.itch.io/full-stack-witchcraft',
             githubUrl: 'https://github.com/TakeMeGH/gimjam-2025',
-            trailerUrl: 'https://www.youtube.com/watch?v=your-trailer-id',
+            trailerUrl: 'https://youtu.be/Q1zPb2I6opQ?t=107',
             showItchio: true,
             showGithub: true,
             showTrailer: true,
             details: {
-                overview: 'Help Caca and Cici gather as many books as possible in a magical, chaotic environment. Play locally with a friend and experience the fun of too many books, too many hazards, and too much chaos!',
+                overview: 'Help Caca and Cici gather as many books as possible in a magical, chaotic environment. Play locally with a friend and experience the fun of too many books, too many hazards, and too much chaos! This project was my first experience with Unreal Engine game development and local multiplayer implementation.',
                 contributions: [
-                    'Main Programmer: Abdul Rafi',
+                    'Developed complex physics system for book stacking and interactions',
                     'Implemented core gameplay mechanics and local multiplayer',
                     'Integrated sound and visual effects for immersive experience'
                 ],
-                codeSnippet: `// Example gameplay logic\nvoid CollectBook(Player player) {\n    player.books += 1;\n    if (player.books > maxBooks) {\n        TriggerChaos();\n    }\n}`
             }
         },
         {
             id: 'molly',
             title: 'Molly, Palli-Palli!',
             image: 'static/image/games/Moly.png',
-            tags: ['Unity', 'Platformer', 'Educational'],
-            description: 'A platformer about a cat escaping a house fire, teaching safety and problem-solving. Developed for Gamejam+ 2024.',
+            tags: ['Unity', 'Platformer', 'Educational', '2.5D', '3D Environment'],
+            description: 'My first game featuring a 3D environment with 2D characters! A platformer about a cat escaping a house fire, teaching safety and problem-solving. Developed for Gamejam+ 2024.',
             showTechnicalHighlights: false,
             itchioUrl: 'https://navisraditya.itch.io/molly-palli-palli',
             githubUrl: 'https://github.com/TakeMeGH/the-cat',
-            trailerUrl: 'https://www.youtube.com/watch?v=your-trailer-id',
+            trailerUrl: 'https://youtu.be/7pV3GCESNis?si=M9FpvlCx7Tdvmdv-',
             showItchio: true,
             showGithub: true,
             showTrailer: true,
             details: {
-                overview: 'Guide Molly the cat to safety by solving puzzles and using household items. Learn about fire safety in a fun, retro-inspired environment.',
+                overview: 'Guide Molly the cat to safety by solving puzzles and using household items. Learn about fire safety in a fun, retro-inspired environment. This project combines 2D character sprites with a 3D environment, creating a unique 2.5D visual style using Unity\'s built-in systems.',
                 contributions: [
+                    'Utilized Unity\'s 2D sprite system in 3D space',
+                    'Created seamless integration between 2D characters and 3D environment',
                     'Programmed core movement and interaction systems',
-                    'Designed educational gameplay elements',
-                    'Collaborated on level and puzzle design'
+                    'Collaborated on level and puzzle design',
                 ],
-                codeSnippet: `// Example movement logic\nvoid Jump() {\n    if (isGrounded) {\n        velocity.y = jumpForce;\n    }\n}`
             }
         }
     ],
@@ -76,69 +78,65 @@ const projects = {
             id: 'last-threads',
             title: 'The Knight, The Princess, and The Last Threads',
             image: 'static/image/games/LastThreads.png',
-            tags: ['Unity', 'Fighting', 'Co-op'],
-            description: 'Defend the universe\'s last threads in this fast-paced co-op fighting game. Developed for Garena Game Jam 2, 2025.',
+            tags: ['Unity', 'Fighting', 'Co-op', 'Local Multiplayer', 'Cutscenes'],
+            description: 'My first local multiplayer game in Unity! A polished, fast-paced co-op fighting game where you defend the universe\'s last threads. Developed for Garena Game Jam 2, 2025.',
             showTechnicalHighlights: false,
             itchioUrl: 'https://navisraditya.itch.io/the-knight-the-princess-and-the-last-threads',
             githubUrl: 'https://github.com/TakeMeGH/garena-game-jam-2',
-            trailerUrl: 'https://www.youtube.com/watch?v=your-trailer-id',
             showItchio: true,
             showGithub: true,
-            showTrailer: true,
             details: {
-                overview: 'Play as Hades and Lopi, defending the last threads of the universe from waves of enemies. Use simple two-button controls for intense local multiplayer action.',
+                overview: 'Play as Hades and Lopi, defending the last threads of the universe from waves of enemies. Use simple two-button controls for intense local multiplayer action. Features cinematic cutscenes and polished gameplay mechanics.',
                 contributions: [
-                    'Main Programmer: Abdul Rafi',
-                    'Implemented two-button control system',
-                    'Developed enemy AI and wave system'
-                ],
-                codeSnippet: `// Example control logic\nvoid OnButtonPress(Button button) {\n    if (button == Button.Left) AttackLeft();\n    else if (button == Button.Right) AttackRight();\n}`
+                    'Implemented two-button control system for accessible gameplay',
+                    'Developed enemy AI and wave system',
+                    'Created and implemented cutscenes',
+                    'Designed and polished core combat mechanics',
+                    'Built local multiplayer system'
+                ]
             }
         },
         {
             id: 'trafficky',
             title: 'Trafficky',
             image: 'static/image/games/Traficky.png',
-            tags: ['Unity', 'Educational', 'Puzzle'],
-            description: 'A puzzle game teaching traffic rules to children. Developed for GEMASTIK XVI.',
+            tags: ['Unity', 'Educational', 'Puzzle', '3D', 'Custom Systems'],
+            description: 'My first 3D project in Unity! A puzzle game teaching traffic rules to children. Developed for GEMASTIK XVI, featuring custom dialogue and traffic management systems.',
             showTechnicalHighlights: false,
             itchioUrl: 'https://navisraditya.itch.io/trafficky',
             githubUrl: 'https://github.com/TakeMeGH/wijart-gemastik-2023',
-            trailerUrl: 'https://www.youtube.com/watch?v=your-trailer-id',
             showItchio: true,
             showGithub: true,
-            showTrailer: true,
             details: {
-                overview: 'Identify traffic violations and help Rara, the police officer, keep the roads safe. Designed for educational impact and fun!',
+                overview: 'Identify traffic violations and help Rara, the police officer, keep the roads safe. Designed for educational impact and fun! This project features a custom dialogue system and dynamic traffic management.',
                 contributions: [
                     'Programmed core gameplay and UI',
-                    'Designed educational mechanics',
-                    'Collaborated on 3D asset creation'
-                ],
-                codeSnippet: `// Example violation check\nbool IsViolation(Car car) {\n    return car.speed > speedLimit || car.hasNoSeatbelt;\n}`
+                    'Developed custom dialogue system for character interactions',
+                    'Created traffic management system for car spawning and events',
+                    'Implemented 3D environment',
+                ]
             }
         },
         {
             id: 'galactic-dive',
             title: 'Galactic Dive',
             image: 'static/image/games/GalacticDive.png',
-            tags: ['Unity', 'Action', 'Space'],
-            description: 'Dive into the galactic unknown in this vertical action-exploration game. In development.',
+            tags: ['Unity', 'Action', 'Space', 'WebGL', 'Cross-platform', 'Infinite Runner'],
+            description: 'Dive into the galactic unknown in this vertical action-exploration game. Built with WebGL for cross-platform support (PC and mobile), featuring infinite runner gameplay. In development.',
             showTechnicalHighlights: false,
             itchioUrl: 'https://takemegh.itch.io/galactic-dive',
             githubUrl: 'https://github.com/TakeMeGH/compfest-downwell',
-            trailerUrl: 'https://www.youtube.com/watch?v=your-trailer-id',
             showItchio: true,
             showGithub: true,
-            showTrailer: true,
             details: {
-                overview: 'Navigate through uncharted galaxies, battle alien creatures, and survive the mysteries of space with advanced, weaponized boots.',
+                overview: 'Navigate through uncharted galaxies, battle alien creatures, and survive the mysteries of space with advanced, weaponized boots. Experience endless gameplay with procedurally generated levels and infinite runner mechanics.',
                 contributions: [
                     'Developed vertical movement and combat systems',
                     'Designed alien enemy behaviors',
-                    'Implemented procedural level elements'
-                ],
-                codeSnippet: `// Example dive logic\nvoid Dive() {\n    position.y -= diveSpeed * Time.deltaTime;\n    CheckForObstacles();\n}`
+                    'Implemented infinite runner gameplay mechanics',
+                    'Created WebGL build for cross-platform support',
+                    'Optimized input system for mobile devices'
+                ]
             }
         }
     ],

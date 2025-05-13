@@ -1,46 +1,58 @@
 const workExperience = [
   {
-    role: "Game Programmer",
-    company: "WijART Studio",
+    role: "COO and Senior Coach",
+    company: "Kokocoder",
     location: "Jakarta, Indonesia",
-    start: "Aug 2022",
+    start: "Apr 2021",
     end: "Present",
-    description: "Responsible for designing, developing, and maintaining core gameplay systems for multiple shipped titles using Unity and C#.",
+    description: "Leading and managing Kokocoder's coding education initiatives while contributing to platform development.",
     achievements: [
-      "Led programming for 'Trafficky' (GEMASTIK XVI Finalist) and 'Courier's Conquest'.",
-      "Collaborated with cross-functional teams to implement new features and optimize performance.",
-      "Integrated third-party plugins and managed version control with Git.",
-      "Optimized game performance for mobile and desktop platforms.",
-      "Mentored junior developers and conducted code reviews."
+      "Making and giving lectures on programming and game development",
+      "Problem setter for coding competitions",
+      "Managed Knight Camp 6.0, an offline competitive programming camp with 130 participants",
+      "One of the developers of Kokocoder web platform",
+      "Managing and coordinating educational programs"
     ]
   },
   {
-    role: "Freelance Game Developer",
-    company: "Various Clients",
-    location: "Remote",
-    start: "Jan 2021",
-    end: "Jul 2022",
-    description: "Worked with indie clients to develop custom game prototypes and tools using Unity and Godot.",
+    role: "Supporting Tech Engineer Staff",
+    company: "Agate",
+    location: "Bandung, Indonesia",
+    start: "Jun 2024",
+    end: "Sep 2024",
+    description: "Internship in Agate's Porting Division, focusing on Unreal Engine development and PlayStation 5 features.",
     achievements: [
-      "Provided technical consultation and code reviews for small teams.",
-      "Created educational and simulation games for web and desktop platforms.",
-      "Delivered projects on time and within budget.",
-      "Developed reusable code libraries for rapid prototyping."
+      "Worked with Unreal Engine lighting and materials",
+      "Implemented Gameplay Ability System (GAS)",
+      "Ported PlayStation 5 features",
     ]
   },
   {
-    role: "Game Development Intern",
-    company: "PT. Digital Arts Studio",
+    role: "Lead Programmer",
+    company: "Agate Game Course",
     location: "Jakarta, Indonesia",
-    start: "Jun 2020",
-    end: "Dec 2020",
-    description: "Assisted in the development of 2D and 3D game assets and contributed to gameplay programming.",
+    start: "Feb 2024",
+    end: "Jun 2024",
+    description: "Led programming for Agate Studi Independen Pengembang Game Batch 6.",
     achievements: [
-      "Created shaders and VFX for in-game environments and characters.",
-      "Developed pipeline tools for the art team to automate repetitive tasks.",
-      "Assisted in performance profiling and optimization.",
-      "Implemented procedural generation systems for background elements."
+      "Led programming team for game development course",
+      "Mentored students in game development",
+      "Coordinated with other instructors and staff",
+      "Developed curriculum and technical materials"
+    ]
+  },
+  {
+    role: "Game Programmer Intern",
+    company: "Ikadev",
+    location: "Jakarta, Indonesia",
+    start: "Nov 2023",
+    end: "Mar 2024",
+    description: "Worked as a Godot game programmer intern, contributing to game development projects.",
+    achievements: [
+      "Developed games using Godot Engine",
+      "Collaborated with development team",
+      "Implemented game features and mechanics",
+      "Contributed to project development"
     ]
   }
-  // Add more jobs here if needed!
 ]; 

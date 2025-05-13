@@ -159,10 +159,12 @@ function createProjectModal(project) {
                             ${project.details.contributions.map(contribution => `<li>${contribution}</li>`).join('')}
                         </ul>
                         
+                        ${project.showTechnicalHighlights ? `
                         <h3 class="text-xl font-bold mb-3 text-indigo-300">Technical Highlights</h3>
                         <div class="bg-gray-700 rounded-lg p-4 mb-6">
                             <code class="text-gray-200 text-sm whitespace-pre-wrap break-words">${project.details.codeSnippet}</code>
                         </div>
+                        ` : ''}
                         
                         <div class="flex flex-wrap gap-4 justify-between items-center">
                             ${project.showItchio && project.itchioUrl ? `
