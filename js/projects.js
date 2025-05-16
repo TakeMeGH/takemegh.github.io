@@ -164,25 +164,26 @@ const projects = {
                 ]
             }
         },
-        // {
-        //     id: 'gameplay-ability',
-        //     title: 'Gameplay Ability System Research',
-        //     image: 'https://images.unsplash.com/photo-1639762681057-1e71aacd134c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-        //     tags: ['Unreal Engine', 'GAS', 'Multiplayer'],
-        //     description: 'Research into implementing a comprehensive gameplay ability system for MOBA-style games with multiplayer support.',
-        //     githubUrl: 'https://github.com/TakeMeGH/gameplay-ability',
-        //     showGithub: true,
-        //     details: {
-        //         overview: 'This project explored the implementation of a comprehensive gameplay ability system for MOBA-style games, including level progression, skill points, and multiplayer support.',
-        //         contributions: [
-        //             'Designed and implemented a flexible level progression system with experience points and level-up mechanics',
-        //             'Implemented active and passive skills with customizable effects and conditions',
-        //             'Maintained multiplayer replication to ensure consistent gameplay across all clients',
-        //             'Built an UI system for skill management and progression visualization',
-        //             'Created a data-driven approach for easy skill creation and balancing'
-        //         ]
-        //     }
-        // },
+        {
+            id: 'gameplay-ability',
+            title: 'Gameplay Ability System Research',
+            image: 'static/image/rnd/PVP.png',
+            tags: ['Unreal Engine', 'GAS', 'Multiplayer'],
+            description: 'Research into implementing a comprehensive gameplay ability system for MOBA-style games with multiplayer support.',
+            itchioUrl: 'https://takemegh.itch.io/pvp-moba-gas',
+            trailerUrl: 'https://youtu.be/AH4bESsIOxw',
+            showItchio: true,
+            showTrailer: true,
+            details: {
+                overview: 'This project explored the implementation of a comprehensive gameplay ability system for MOBA-style games, including level progression, skill points, and multiplayer support.',
+                contributions: [
+                    'Designed and implemented a level progression system with experience points and level-up mechanics',
+                    'Implemented active and passive skills with customizable effects',
+                    'Maintained multiplayer replication to ensure consistent gameplay across all clients',
+                    'Built an UI system for skill management and progression visualization',
+                ]
+            }
+        },
         {
             id: 'pcg-outdoor',
             title: 'Procedural Content Generation for Outdoor Environments',
