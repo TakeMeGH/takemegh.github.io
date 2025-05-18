@@ -146,13 +146,13 @@ const projects = {
             title: 'FPS 3C and Shader Research',
             image: 'static/image/rnd/FPS3C.png',
             tags: ['Unreal Engine', 'Shader Development', 'PS5 Integration'],
-            description: 'Research into FPS character control, camera systems, and advanced shader effects with PS5 integration.',
+            description: 'Research project focusing on three main areas: FPS character control and camera systems, advanced shader effects, and PlayStation 5 feature integration.',
             itchioUrl: 'https://takemegh.itch.io/fps-3c',
             trailerUrl: 'https://youtu.be/to3GocxHeRg',
             showItchio: true,
             showTrailer: true,
             details: {
-                overview: 'This project focused on developing advanced FPS character control and camera systems, along with various shader effects, while integrating with PS5-specific features.',
+                overview: 'This project explored three key areas of game development: implementing a robust FPS character controller and camera system, creating various shader effects for gameplay and UI, and integrating PlayStation 5-specific features for enhanced gameplay experience.',
                 contributions: [
                     'Created dissolve shader for character effects',
                     'Created a dynamic health damage UI shader inspired by Call of Duty, with screen effects',
