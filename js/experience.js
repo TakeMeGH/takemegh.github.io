@@ -5,7 +5,7 @@ const workExperience = [
     location: "Jakarta, Indonesia",
     start: "Apr 2021",
     end: "Present",
-    description: "Leading and managing Kokocoder's coding education initiatives while contributing to platform development.",
+    description: "Coding coach who is also entrusted with leading and managing Kokocoder events, including competitive programming camps and competitions.",
     achievements: [
       "Managed Knight Camp 6.0, an offline competitive programming camp with 130 participants",
       "Making and giving lectures on competitive programming",
