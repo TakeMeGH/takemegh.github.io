@@ -6,7 +6,7 @@ const projects = {
             title: 'Courier\'s Conquest',
             image: 'static/image/games/CourierConquest.jpg',
             tags: ['Unity', 'Adventure', 'Delivery', 'RPG', 'Team Lead'],
-            description: 'Embark on a delivery adventure in a whimsical world. Overcome obstacles and deliver packages on time! As the lead programmer, I managed a team of 6 programmers while implementing core gameplay systems.',
+            description: 'A RPG project inspired by Genshin Impact, where players embark on a delivery adventure in a vibrant open world. As the lead programmer, I managed a team of 6 programmers while implementing core RPG systems and mechanics.',
             showTechnicalHighlights: false,
             itchioUrl: 'https://rmdtya.itch.io/couriers-conquest',
             githubUrl: 'https://github.com/TakeMeGH/couriers-conquest',
@@ -15,7 +15,7 @@ const projects = {
             showGithub: true,
             showTrailer: true,
             details: {
-                overview: 'Take on the role of a courier in a vibrant world. Navigate challenges, optimize your route, and ensure timely deliveries. This RPG adventure features a comprehensive movement system, quest system, and interactive dialogue.',
+                overview: 'Take on the role of a courier in a vast, open world inspired by Genshin Impact. Navigate through environments, complete quests, and interact with NPCs. This RPG adventure features a comprehensive movement system, quest system, and interactive dialogue, all while maintaining the core delivery gameplay loop.',
                 contributions: [
                     'Lead Programmer: Managed and coordinated a team of 6 programmers',
                     'Developed core movement system including advanced climbing mechanics',
