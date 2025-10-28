@@ -1,6 +1,6 @@
 const workExperience = [
   {
-    role: "COO and Senior Coach",
+    role: "Senior Coach",
     company: "Kokocoder",
     location: "Jakarta, Indonesia",
     start: "Apr 2021",
